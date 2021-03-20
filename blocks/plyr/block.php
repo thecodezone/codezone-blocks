@@ -24,6 +24,7 @@ $classes = cz_classes(
 	<?php if ($src): ?>
 		<div class="plyr__video-embed">
 			<iframe
+                class="plyr__iframe"
 				src="<?php echo $src; ?>"
 				allowfullscreen
 				allowtransparency
