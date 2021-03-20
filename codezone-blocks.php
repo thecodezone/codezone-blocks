@@ -47,6 +47,7 @@ add_action('acf/init', 'cz_init_block_types');
 function cz_init_block_types() {
 
 	if( function_exists('acf_register_block_type') ) {
+	    require __DIR__ . '/blocks/container/register.php';
 		require __DIR__ . '/blocks/hero/register.php';
 		require __DIR__ . '/blocks/plyr/register.php';
 		require __DIR__ . '/blocks/rule/register.php';
@@ -64,5 +65,6 @@ function cz_init_block_types() {
 		require __DIR__ . '/fields/video.php';
 		require __DIR__ . '/fields/video-embed.php';
 		require __DIR__ . '/fields/section.php';
+		require __DIR__ . '/fields/width.php';
 	}
 }

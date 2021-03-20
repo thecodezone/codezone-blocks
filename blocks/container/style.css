@@ -1,0 +1,8 @@
+.block--cz-container {
+    margin: auto;
+    max-width: var(--cz-container-width, unset);
+}
+
+.block-editor .block--cz-container {
+    border: dashed 1px #22A5AD;
+}
