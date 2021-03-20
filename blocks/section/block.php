@@ -37,7 +37,7 @@ $classes = cz_classes(
 );
 ?>
 
-<div class="block--cz-section--wrapper">
+<section class="block--cz-section--wrapper" role="region">
 	<div
 		class="<?= $classes ?>"
 		style="
@@ -93,5 +93,5 @@ $classes = cz_classes(
 			<InnerBlocks/>
 		</div>
 	</div>
-</div>
+</section>
 

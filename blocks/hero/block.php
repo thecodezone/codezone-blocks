@@ -50,9 +50,9 @@ $classes = cz_classes(
 		<?php if ($padding_right_mobile !== null) : ?> --cz-hero-padding-right-mobile: <?= esc_attr($padding_right_mobile) . 'px' ?>; <?php endif; ?>
 		<?php if ($padding_bottom_mobile !== null) : ?> --cz-hero-padding-bottom-mobile: <?= esc_attr($padding_bottom_mobile) . 'px' ?>; <?php endif; ?>
 		<?php if ($padding_left_mobile !== null) : ?> --cz-hero-padding-left-mobile: <?= esc_attr($padding_left_mobile) . 'px' ?>; <?php endif; ?>
-		<?php if ($background_image) : ?> --cz-hero-background-image: <?= "url('" . esc_attr($background_image['url']) . "')" ?>; <?php endif; ?>
-		<?php if ($background_overlay_opacity) : ?> --cz-hero-background-overlay-color: <?= "rgba(0,0,0," . $background_overlay_opacity/10 . ")" ?>; <?php endif; ?>
-		<?php if ($background_image_mobile) : ?> --cz-hero-background-image-mobile: <?= "url('" . esc_attr($background_image_mobile['url']) . "')" ?>; <?php endif; ?>
+		<?php if (!$background_video && $background_image) : ?> --cz-hero-background-image: <?= "url('" . esc_attr($background_image['url']) . "')" ?>; <?php endif; ?>
+        <?php if (!$background_video && $background_image_mobile) : ?> --cz-hero-background-image-mobile: <?= "url('" . esc_attr($background_image_mobile['url']) . "')" ?>; <?php endif; ?>
+        <?php if ($background_overlay_opacity) : ?> --cz-hero-background-overlay-color: <?= "rgba(0,0,0," . $background_overlay_opacity/10 . ")" ?>; <?php endif; ?>
 		<?php if ($border_color) : ?> --cz-hero-border-color: <?= esc_attr($border_color) ?>; <?php endif; ?>
 		<?php if ($border_top !== null) : ?> --cz-hero-border-top: <?= esc_attr($border_top) . 'px' ?>; <?php endif; ?>
 		<?php if ($border_right !== null) : ?> --cz-hero-border-right: <?= esc_attr($border_right) . 'px' ?>; <?php endif; ?>
