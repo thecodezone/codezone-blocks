@@ -1,6 +1,7 @@
 .block--cz-section {
+	--cz-section-padding-default: var(--cz-section-padding, 25px);
 	position: relative;
-	padding: var(--cz-section-padding-top, 25px) var(--cz-section-padding-right, 25px) var(--cz-section-padding-bottom, 25px) var(--cz-section-padding-left, 25px);
+	padding: var(--cz-section-padding-top, var(--cz-section-padding-default)) var(--cz-section-padding-right, var(--cz-section-padding-default)) var(--cz-section-padding-bottom, var(--cz-section-padding-default)) var(--cz-section-padding-left, var(--cz-section-padding-default));
 	background-color: var(--cz-section-background-color, transparent);
 	background-image: var(--cz-section-background-image);
 	background-size: cover;

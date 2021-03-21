@@ -11,7 +11,7 @@ acf_add_local_field_group([
             'type' => 'range',
             'default_value' => 0,
             'step_size' => 5,
-            'append' => '%',
+            'append' => 'px',
             'max' => 2500
         ],
     ],
