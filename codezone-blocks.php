@@ -43,7 +43,6 @@ function cz_render_acf_block($block_name, $template) {
 };
 
 add_action('acf/init', 'cz_init_block_types');
-
 function cz_init_block_types() {
 
 	if( function_exists('acf_register_block_type') ) {

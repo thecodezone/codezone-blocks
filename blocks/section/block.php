@@ -39,7 +39,7 @@ $classes = cz_classes(
 
 ?>
 
-<div class="block--cz-section--wrapper">
+<div class="block--cz-section__wrapper">
 	<section
         role="region"
 		class="<?= $classes ?>"

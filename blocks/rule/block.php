@@ -9,12 +9,14 @@ $classes = cz_classes(
 );
 ?>
 
-<div
-	class="<?= $classes ?>"
-	style="
-	<?php if ($height) : ?> --cz-rule-height: <?= esc_attr($height) . 'px'?>; <?php endif; ?>
-	<?php if ($left_color) : ?> --cz-rule_left_color: <?= esc_attr($left_color) ?>; <?php endif; ?>
-	<?php if ($right_color) : ?> --cz-rule_right_color: <?= esc_attr($right_color) ?>; <?php endif; ?>
-		"
->
+<div class="block--cz-rule__wrapper">
+    <div
+            class="<?= $classes ?>"
+            style="
+            <?php if ($height) : ?> --cz-rule-height: <?= esc_attr($height) . 'px'?>; <?php endif; ?>
+            <?php if ($left_color) : ?> --cz-rule_left_color: <?= esc_attr($left_color) ?>; <?php endif; ?>
+            <?php if ($right_color) : ?> --cz-rule_right_color: <?= esc_attr($right_color) ?>; <?php endif; ?>
+                    "
+    >
+    </div>
 </div>

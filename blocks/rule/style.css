@@ -3,12 +3,3 @@
 	background: var(--cz-rule_left_color, lightgray);
 	background: linear-gradient(96deg, var(--cz-rule_left_color, lightgray) 0%, var(--cz-rule_right_color, gray) 100%);
 }
-
-.container .block--cz-rule {
-	width: 100vw;
-	left: 50%;
-	right: 50%;
-	margin-left: -50vw;
-	margin-right: -50vw;
-	position: relative;
-}

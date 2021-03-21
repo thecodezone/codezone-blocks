@@ -36,7 +36,7 @@ $classes = cz_classes(
 );
 ?>
 
-<div class="block--cz-hero--wrapper">
+<div class="block--cz-hero__wrapper">
 	<div
 		class="<?= $classes ?>"
 		style="

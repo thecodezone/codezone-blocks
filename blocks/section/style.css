@@ -13,14 +13,6 @@
 	border-left: solid var(--cz-section-border-color, initial) var(--cz-section-border-left, 0px);
 }
 
-.container .block--cz-section {
-	width: 100vw;
-	left: 50%;
-	right: 50%;
-	margin-left: -50vw;
-	margin-right: -50vw;
-}
-
 .block--cz-section.left {
 	text-align: left;
 }
@@ -51,7 +43,7 @@
 	background-color: var(--cz-section-background-overlay-color, transparent);
 }
 
-.block-editor .block--cz-section--wrapper {
+.block-editor .block--cz-section__wrapper {
 	border: dashed 1px #22A5AD;
 }
 

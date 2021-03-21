@@ -16,14 +16,6 @@
 	align-items: center;
 }
 
-.container .block--cz-hero {
-	width: 100vw;
-	left: 50%;
-	right: 50%;
-	margin-left: -50vw;
-	margin-right: -50vw;
-}
-
 .block--cz-hero.left {
 	text-align: left;
 }
@@ -55,7 +47,7 @@
 	background-color: var(--cz-hero-background-overlay-color, transparent);
 }
 
-.block-editor .block--cz-hero--wrapper {
+.block-editor .block--cz-hero__wrapper {
 	border: dashed 1px #22A5AD;
 }
 
