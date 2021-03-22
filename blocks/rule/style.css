@@ -1,4 +1,4 @@
-.block--cz-rule {
+.cz-block--rule {
 	height: var(--cz-rule-height, 7px);
 	background: var(--cz-rule_left_color, lightgray);
 	background: linear-gradient(96deg, var(--cz-rule_left_color, lightgray) 0%, var(--cz-rule_right_color, gray) 100%);

@@ -4,12 +4,12 @@ $left_color = get_field('cz_left_color');
 $right_color = get_field('cz_right_color');
 
 $classes = cz_classes(
-	'block',
-	'block--cz-rule'
+	'cz-block',
+	'cz-block--rule'
 );
 ?>
 
-<div class="block--cz-rule__wrapper">
+<div class="cz-block--rule__wrapper">
     <div
             class="<?= $classes ?>"
             style="

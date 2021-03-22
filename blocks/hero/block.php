@@ -23,20 +23,20 @@ $border_left = get_field('cz_left_border');
 $height = get_field('cz_screen_height');
 
 $classes = cz_classes(
-	'block',
-	'block--cz-hero',
+	'cz-block',
+	'cz-block--hero',
 	$block['className'] ?? null,
 	$block['align'] ?? $block['align'],
-	$background_color ? 'block--has-background' : null,
-	$background_image ? 'block--has-background-image' : null,
-	$background_image_mobile ? 'block--has-background-image-mobile' : null,
-	$background_video ? 'block--has-background-image' : null,
-	$background_video_mobile ? 'block--has-background-image-mobile' : null,
-	$text_color ? 'block--has-text-color' : null
+	$background_color ? 'cz-block--has-background' : null,
+	$background_image ? 'cz-block--has-background-image' : null,
+	$background_image_mobile ? 'cz-block--has-background-image-mobile' : null,
+	$background_video ? 'cz-block--has-background-image' : null,
+	$background_video_mobile ? 'cz-block--has-background-image-mobile' : null,
+	$text_color ? 'cz-block--has-text-color' : null
 );
 ?>
 
-<div class="block--cz-hero__wrapper">
+<div class="cz-block--hero__wrapper">
 	<div
 		class="<?= $classes ?>"
 		style="
@@ -88,7 +88,7 @@ $classes = cz_classes(
 		<?php endif; ?>
 		<div class="background-overlay"></div>
 
-		<div class="block--cz-hero__inner">
+		<div class="cz-block--hero__inner">
 			<InnerBlocks/>
 		</div>
 	</div>

@@ -2,8 +2,8 @@
 $width = get_field('cz_pixel_width');
 
 $classes = cz_classes(
-    'block',
-    'block--cz-container',
+    'cz-block',
+    'cz-block--container',
     'container'
 );
 ?>

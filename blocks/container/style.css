@@ -1,8 +1,9 @@
-.block--cz-container {
+.cz-block--container.container {
     margin: auto;
     max-width: var(--cz-container-width, unset);
 }
 
-.block-editor .block--cz-container {
+.block-editor .cz-block--container.container {
     border: dashed 1px #22A5AD;
+    padding: 25px;
 }

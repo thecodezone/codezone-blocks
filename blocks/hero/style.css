@@ -1,4 +1,4 @@
-.block--cz-hero {
+.cz-block--hero {
 	position: relative;
 	padding: var(--cz-hero-padding-top, 25px) var(--cz-hero-padding-right, 25px) var(--cz-hero-padding-bottom, 25px) var(--cz-hero-padding-left, 25px);
 	background-color: var(--cz-hero-background-color, transparent);
@@ -16,20 +16,20 @@
 	align-items: center;
 }
 
-.block--cz-hero.left {
+.cz-block--hero.left {
 	text-align: left;
 }
 
-.block--cz-hero.right {
+.cz-block--hero.right {
 	text-align: right;
 }
 
-.block--cz-hero.center {
+.cz-block--hero.center {
 	text-align: center;
 }
 
 
-.block-editor .block--cz-hero {
+.block-editor .cz-block--hero {
 	width: auto;
 	left: unset;
 	right: unset;
@@ -37,7 +37,7 @@
 	margin-right: unset;
 }
 
-.block--cz-hero .background-overlay {
+.cz-block--hero .background-overlay {
 	position: absolute;
 	z-index: 0;
 	top: 0;
@@ -47,27 +47,27 @@
 	background-color: var(--cz-hero-background-overlay-color, transparent);
 }
 
-.block-editor .block--cz-hero__wrapper {
+.block-editor .cz-block--hero__wrapper {
 	border: dashed 1px #22A5AD;
 }
 
-.block--cz-hero.block--has-text-color p,
-.block--cz-hero.block--has-text-color li,
-.block--cz-hero.block--has-text-color h1,
-.block--cz-hero.block--has-text-color h2,
-.block--cz-hero.block--has-text-color h3,
-.block--cz-hero.block--has-text-color h4,
-.block--cz-hero.block--has-text-color h5,
-.block--cz-hero.block--has-text-color h6 {
+.cz-block--hero.cz-block--has-text-color p,
+.cz-block--hero.cz-block--has-text-color li,
+.cz-block--hero.cz-block--has-text-color h1,
+.cz-block--hero.cz-block--has-text-color h2,
+.cz-block--hero.cz-block--has-text-color h3,
+.cz-block--hero.cz-block--has-text-color h4,
+.cz-block--hero.cz-block--has-text-color h5,
+.cz-block--hero.cz-block--has-text-color h6 {
 	color: inherit;
 }
 
-.block--cz-hero__inner {
+.cz-block--hero__inner {
 	position: relative;
 	z-index: 1;
 }
 
-.block--cz-hero .video-wrapper {
+.cz-block--hero .video-wrapper {
 	position: absolute;
 	top: 0;
 	bottom: 0;
@@ -79,7 +79,7 @@
 	z-index: 0;
 }
 
-.block--cz-hero .video-wrapper video {
+.cz-block--hero .video-wrapper video {
 	height: 100%;
 	width: 100%;
 	object-fit: cover;
@@ -87,15 +87,15 @@
 
 
 @media (max-width: 600px) {
-	.block--cz-hero:first-child {
+	.cz-block--hero:first-child {
 		padding-top: 30px;
 	}
 
-	.block--cz-hero:last-child {
+	.cz-block--hero:last-child {
 		padding-bottom: 25px;
 	}
 
-	.block--cz-hero {
+	.cz-block--hero {
 		padding: var(--cz-hero-padding-top-mobile, 20px) var(--cz-hero-padding-right-mobile, 20px) var(--cz-hero-padding-right-mobile, 20px) var(--cz-hero-padding-left-mobile, 20px);
 		background-image: var(--cz-hero-background-image-mobile, var(--cz-hero-background-image));
 	}

@@ -21,25 +21,29 @@ $border_top = get_field('cz_top_border');
 $border_right = get_field('cz_right_border');
 $border_bottom = get_field('cz_bottom_border');
 $border_left = get_field('cz_left_border');
-$width = get_field('cz_width');
+$full_width = get_field('cz_full_width');
 
 $classes = cz_classes(
-	'block',
-	'block--cz-section',
+	'cz-block',
+	'cz-block--section',
 	$block['className'] ?? null,
 	$block['align'] ?? null,
-	$background_color ? 'block--has-background' : null,
-	$background_image ? 'block--has-background-image' : null,
-	$background_image_mobile ? 'block--has-background-image-mobile' : null,
-	$background_video ? 'block--has-background-image' : null,
-	$background_video_mobile ? 'block--has-background-image-mobile' : null,
-	$text_color ? 'block--has-text-color' : null,
-	$width ? 'block--has-width' : null
+	$background_color ? 'cz-block--has-background' : null,
+	$background_image ? 'cz-block--has-background-image' : null,
+	$background_image_mobile ? 'cz-block--has-background-image-mobile' : null,
+	$background_video ? 'cz-block--has-background-image' : null,
+	$background_video_mobile ? 'cz-block--has-background-image-mobile' : null,
+	$text_color ? 'cz-block--has-text-color' : null
+);
+
+$inner_classes = cz_classes(
+    'cz-block--section__inner',
+    $full_width ? null : 'container mx-auto'
 );
 
 ?>
 
-<div class="block--cz-section__wrapper">
+<div class="cz-block--section__wrapper">
 	<section
         role="region"
 		class="<?= $classes ?>"
@@ -62,7 +66,6 @@ $classes = cz_classes(
 		<?php if ($border_right !== null) : ?> --cz-section-border-right: <?= esc_attr($border_right) . 'px' ?>; <?php endif; ?>
 		<?php if ($border_bottom !== null) : ?> --cz-section-border-bottom: <?= esc_attr($border_bottom) . 'px' ?>; <?php endif; ?>
 		<?php if ($border_left !== null) : ?> --cz-section-border-left: <?= esc_attr($border_left) . 'px' ?>; <?php endif; ?>
-		<?php if ($width !== null) : ?> --cz-width: <?= esc_attr($width) . '%' ?>; <?php endif; ?>
 			"
 		<?php if ($anchor): ?>id="<?= $anchor ?>"<?php endif; ?>
 	>
@@ -92,7 +95,7 @@ $classes = cz_classes(
 		<?php endif; ?>
 		<div class="background-overlay"></div>
 
-		<div class="block--cz-section__inner container mx-auto">
+		<div class="<?php echo $inner_classes; ?>">
 			<InnerBlocks/>
 		</div>
 	</section>

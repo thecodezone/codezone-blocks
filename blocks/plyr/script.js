@@ -13,7 +13,7 @@
 	 * @return  void
 	 */
 	var initializeBlock = function( block ) {
-		var embed = block.querySelector('.plyr__video-embed')
+		var embed = block[0].querySelector('.plyr__video-embed')
 		if (embed) {
 			console.log(embed)
 			new Plyr(embed);
@@ -22,11 +22,13 @@
 
 	// Initialize each block on page load (front end).
 	document.addEventListener("DOMContentLoaded", function() {
-		document.querySelectorAll('.block--cz-plyr').forEach(initializeBlock)
+		document.querySelectorAll('.cz-block--plyr').forEach(function(el) {
+			initializeBlock([el])
+		})
 	})
 
 	// Initialize dynamic block preview (editor).
 	if( window.acf ) {
-		window.acf.addAction( 'render_block_preview/type=testimonial', initializeBlock );
+		window.acf.addAction( 'render_block_preview/type=cz-plyr', initializeBlock );
 	}
 })(jQuery);

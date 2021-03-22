@@ -4,18 +4,16 @@ acf_add_local_field_group([
 	'key' => 'cz_section',
 	'title' => 'Section',
 	'fields' => [
+        [
+            'key' => 'cz_full_width',
+            'label' => 'Full width',
+            'name' => 'cz_full_width',
+            'type' => 'true_false',
+            'ui' => true,
+            'default' => false
+        ],
 		[
-			'key' => 'cz_width',
-			'label' => 'Width',
-			'name' => 'cz_width',
-			'type' => 'range',
-			'default_value' => 100,
-			'step_size' => 5,
-			'append' => '%',
-			'max' => 100
-		],
-		[
-			'key' => 'anchor',
+			'key' => 'cz_anchor',
 			'label' => 'Anchor',
 			'name' => 'cz_anchor',
 			'type' => 'text'

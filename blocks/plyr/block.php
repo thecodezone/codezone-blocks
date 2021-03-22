@@ -15,8 +15,8 @@ if(strpos($url, 'youtu') !== false) {
 }
 
 $classes = cz_classes(
-	'block',
-	'block--cz-plyr'
+	'cz-block',
+	'cz-block--plyr'
 );
 
 ?>
