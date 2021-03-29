@@ -46,6 +46,7 @@ add_action('acf/init', 'cz_init_block_types');
 function cz_init_block_types() {
 
 	if( function_exists('acf_register_block_type') ) {
+        require __DIR__ . '/blocks/carousel/register.php';
 	    require __DIR__ . '/blocks/container/register.php';
 		require __DIR__ . '/blocks/hero/register.php';
 		require __DIR__ . '/blocks/plyr/register.php';
@@ -54,6 +55,7 @@ function cz_init_block_types() {
 	}
 
 	if( function_exists('acf_add_local_field_group') ) {
+        require __DIR__ . '/fields/carousel.php';
 		require __DIR__ . '/fields/typography.php';
 		require __DIR__ . '/fields/borders.php';
 		require __DIR__ . '/fields/height.php';

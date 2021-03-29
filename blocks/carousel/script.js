@@ -13,21 +13,22 @@
 	 * @return  void
 	 */
 	var initializeBlock = function( block ) {
-		var embed = block[0].querySelector('.plyr__video-embed')
-		if (embed) {
-			new Plyr(embed);
+		var container = block[0].querySelector('.swiper-container')
+		if (container) {
+			const options = block[0].dataset.swiperOptions ? JSON.parse(block[0].dataset.swiperOptions) : []
+			new Swiper(container, options);
 		}
 	}
 
 	// Initialize each block on page load (front end).
 	document.addEventListener("DOMContentLoaded", function() {
-		document.querySelectorAll('.cz-block--plyr').forEach(function(el) {
+		document.querySelectorAll('.cz-block--carousel').forEach(function(el) {
 			initializeBlock([el])
 		})
 	})
 
 	// Initialize dynamic block preview (editor).
 	if( window.acf ) {
-		window.acf.addAction( 'render_block_preview/type=cz-plyr', initializeBlock );
+		//window.acf.addAction( 'render_block_preview/type=cz-carousel', initializeBlock );
 	}
 })(jQuery);
