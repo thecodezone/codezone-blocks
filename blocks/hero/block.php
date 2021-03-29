@@ -2,6 +2,7 @@
 $anchor = get_field('cz_anchor');
 $background_color = get_field('cz_background_color');
 $text_color = get_field('cz_text_color');
+$has_padding = get_field('cz_has_padding');
 $padding_top = get_field('cz_top_padding');
 $padding_right = get_field('cz_right_padding');
 $padding_bottom = get_field('cz_bottom_padding');
@@ -42,14 +43,14 @@ $classes = cz_classes(
 		style="
 		<?php if ($background_color) : ?> --cz-hero-background-color: <?= esc_attr($background_color) ?>; <?php endif; ?>
 		<?php if ($text_color) : ?> --cz-hero-text-color: <?= esc_attr($text_color) ?>; <?php endif; ?>
-		<?php if ($padding_top !== null) : ?> --cz-hero-padding-top: <?= esc_attr($padding_top) . 'px' ?>; <?php endif; ?>
-		<?php if ($padding_right !== null) : ?> --cz-hero-padding-right: <?= esc_attr($padding_right) . 'px' ?>; <?php endif; ?>
-		<?php if ($padding_bottom !== null) : ?> --cz-hero-padding-bottom: <?= esc_attr($padding_bottom) . 'px' ?>; <?php endif; ?>
-		<?php if ($padding_left !== null) : ?> --cz-hero-padding-left: <?= esc_attr($padding_left) . 'px' ?>; <?php endif; ?>
-		<?php if ($padding_top_mobile !== null) : ?> --cz-hero-padding-top-mobile: <?= esc_attr($padding_top_mobile) . 'px' ?>; <?php endif; ?>
-		<?php if ($padding_right_mobile !== null) : ?> --cz-hero-padding-right-mobile: <?= esc_attr($padding_right_mobile) . 'px' ?>; <?php endif; ?>
-		<?php if ($padding_bottom_mobile !== null) : ?> --cz-hero-padding-bottom-mobile: <?= esc_attr($padding_bottom_mobile) . 'px' ?>; <?php endif; ?>
-		<?php if ($padding_left_mobile !== null) : ?> --cz-hero-padding-left-mobile: <?= esc_attr($padding_left_mobile) . 'px' ?>; <?php endif; ?>
+		<?php if ($has_padding && $padding_top !== null) : ?> --cz-hero-padding-top: <?= esc_attr($padding_top) . 'px' ?>; <?php endif; ?>
+		<?php if ($has_padding && $padding_right !== null) : ?> --cz-hero-padding-right: <?= esc_attr($padding_right) . 'px' ?>; <?php endif; ?>
+		<?php if ($has_padding && $padding_bottom !== null) : ?> --cz-hero-padding-bottom: <?= esc_attr($padding_bottom) . 'px' ?>; <?php endif; ?>
+		<?php if ($has_padding && $padding_left !== null) : ?> --cz-hero-padding-left: <?= esc_attr($padding_left) . 'px' ?>; <?php endif; ?>
+		<?php if ($has_padding && $padding_top_mobile !== null) : ?> --cz-hero-padding-top-mobile: <?= esc_attr($padding_top_mobile) . 'px' ?>; <?php endif; ?>
+		<?php if ($has_padding && $padding_right_mobile !== null) : ?> --cz-hero-padding-right-mobile: <?= esc_attr($padding_right_mobile) . 'px' ?>; <?php endif; ?>
+		<?php if ($has_padding && $padding_bottom_mobile !== null) : ?> --cz-hero-padding-bottom-mobile: <?= esc_attr($padding_bottom_mobile) . 'px' ?>; <?php endif; ?>
+		<?php if ($has_padding && $padding_left_mobile !== null) : ?> --cz-hero-padding-left-mobile: <?= esc_attr($padding_left_mobile) . 'px' ?>; <?php endif; ?>
 		<?php if (!$background_video && $background_image) : ?> --cz-hero-background-image: <?= "url('" . esc_attr($background_image['url']) . "')" ?>; <?php endif; ?>
         <?php if (!$background_video && $background_image_mobile) : ?> --cz-hero-background-image-mobile: <?= "url('" . esc_attr($background_image_mobile['url']) . "')" ?>; <?php endif; ?>
         <?php if ($background_overlay_opacity) : ?> --cz-hero-background-overlay-color: <?= "rgba(0,0,0," . $background_overlay_opacity/10 . ")" ?>; <?php endif; ?>

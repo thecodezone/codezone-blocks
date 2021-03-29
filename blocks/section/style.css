@@ -1,7 +1,11 @@
+.cz-block--section__wrapper {
+	--cz-section-padding-y-default: var(--cz-section-padding-y, 25px);
+	--cz-section-padding-x-default: var(--cz-section-padding-x, 25px);
+}
+
 .cz-block--section {
-	--cz-section-padding-default: var(--cz-section-padding, 25px);
 	position: relative;
-	padding: var(--cz-section-padding-top, var(--cz-section-padding-default)) var(--cz-section-padding-right, var(--cz-section-padding-default)) var(--cz-section-padding-bottom, var(--cz-section-padding-default)) var(--cz-section-padding-left, var(--cz-section-padding-default));
+	padding: var(--cz-section-padding-top, var(--cz-section-padding-y-default)) var(--cz-section-padding-right, var(--cz-section-padding-x-default)) var(--cz-section-padding-bottom, var(--cz-section-padding-y-default)) var(--cz-section-padding-left, var(--cz-section-padding-x-default));
 	background-color: var(--cz-section-background-color, transparent);
 	background-image: var(--cz-section-background-image);
 	background-size: cover;
@@ -90,16 +94,13 @@
 
 
 @media (max-width: 600px) {
-	.cz-block--section:first-child {
-		padding-top: 30px;
-	}
-
-	.cz-block--section:last-child {
-		padding-bottom: 25px;
+	.cz-block--section__wrapper {
+		--cz-section-padding-y-default: var(--cz-section-padding-y-mobile, 25px);
+		--cz-section-padding-x-default: var(--cz-section-padding-x-mobile, 25px);
 	}
 
 	.cz-block--section {
-		padding: var(--cz-section-padding-top-mobile, 20px) var(--cz-section-padding-right-mobile, 20px) var(--cz-section-padding-right-mobile, 20px) var(--cz-section-padding-left-mobile, 20px);
+		padding: var(--cz-section-padding-top-mobile, var(--cz-section-padding-y-default)) var(--cz-section-padding-right-mobile, var(--cz-section-padding-x-default)) var(--cz-section-padding-right-mobile, var(--cz-section-padding-y-default)) var(--cz-section-padding-left-mobile, var(--cz-section-padding-x-default));
 		background-image: var(--cz-section-background-image-mobile, var(--cz-section-background-image));
 	}
 }

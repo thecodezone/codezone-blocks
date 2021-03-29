@@ -1,6 +1,11 @@
+.cz-block--hero__wrapper {
+	--cz-hero-padding-y-default: var(--cz-section-padding-y, 25px);
+	--cz-hero-padding-x-default: var(--cz-section-padding-x, 25px);
+}
+
 .cz-block--hero {
 	position: relative;
-	padding: var(--cz-hero-padding-top, 25px) var(--cz-hero-padding-right, 25px) var(--cz-hero-padding-bottom, 25px) var(--cz-hero-padding-left, 25px);
+	padding: var(--cz-hero-padding-top, var(--cz-hero-padding-y-default)) var(--cz-hero-padding-right, var(--cz-hero-padding-x-default)) var(--cz-hero-padding-bottom, var(--cz-hero-padding-y-default)) var(--cz-hero-padding-left, var(--cz-hero-padding-x-default));
 	background-color: var(--cz-hero-background-color, transparent);
 	background-image: var(--cz-hero-background-image);
 	background-size: cover;
@@ -87,16 +92,13 @@
 
 
 @media (max-width: 600px) {
-	.cz-block--hero:first-child {
-		padding-top: 30px;
-	}
-
-	.cz-block--hero:last-child {
-		padding-bottom: 25px;
+	.cz-block--hero__wrapper {
+		--cz-hero-padding-y-default: var(--cz-section-padding-y-mobile, 25px);
+		--cz-hero-padding-x-default: var(--cz-section-padding-x-mobile, 25px);
 	}
 
 	.cz-block--hero {
-		padding: var(--cz-hero-padding-top-mobile, 20px) var(--cz-hero-padding-right-mobile, 20px) var(--cz-hero-padding-right-mobile, 20px) var(--cz-hero-padding-left-mobile, 20px);
+		padding: var(--cz-hero-padding-top-mobile, var(--cz-hero-padding-y-default)) var(--cz-hero-padding-right-mobile, var(--cz-hero-padding-x-default)) var(--cz-hero-padding-right-mobile, var(--cz-hero-padding-y-default)) var(--cz-hero-padding-left-mobile, var(--cz-hero-padding-x-default));
 		background-image: var(--cz-hero-background-image-mobile, var(--cz-hero-background-image));
 	}
 }
