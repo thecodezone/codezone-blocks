@@ -1,9 +1,9 @@
 <?php
 $auto_height = get_field('cz_carousel_auto_height') !== null ? get_field('cz_carousel_auto_height') : false;
 $auto_play = get_field('cz_carousel_auto_play') !== null ? get_field('cz_carousel_auto_play') : false;
-$slides_per_view = (int) get_field('cz_carousel_slides_per_view') ?  get_field('cz_carousel_slides_per_view') : 1;
-$slides_per_group = (int) get_field('cz_carousel_slides_per_group') ?  get_field('cz_carousel_slides_per_group') : $slides_per_view;
-$space_between = (int) get_field('cz_carousel_space_between') ?  get_field('cz_carousel_space_between') :30;
+$slides_per_view = get_field('cz_carousel_slides_per_view') ? (int) get_field('cz_carousel_slides_per_view') : 1;
+$slides_per_group = get_field('cz_carousel_slides_per_group') ? (int) get_field('cz_carousel_slides_per_group') : $slides_per_view;
+$space_between = get_field('cz_carousel_space_between') ? (int) get_field('cz_carousel_space_between') :30;
 $loop = get_field('cz_carousel_auto_height') !== null ? get_field('cz_carousel_auto_height') : false;
 
 $classes = cz_classes(
@@ -38,6 +38,7 @@ $options = [
         ]
     ]
 ];
+
 ?>
 
 <div
