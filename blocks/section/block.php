@@ -72,8 +72,9 @@ $inner_classes = cz_classes(
 		<?php if ($background_video): ?>
 			<div class="video-wrapper">
 				<video autoplay
-					   loop
-					   muted
+                       loop
+                       muted
+                       playsinline
 					   width="1280"
 					   height="720">
 					<?php if ($background_video_mobile): ?>

@@ -15,7 +15,7 @@
 	var initializeBlock = function( block ) {
 		var embed = block[0].querySelector('.plyr__video-embed')
 		if (embed) {
-			new Plyr(embed);
+			const plyr = new Plyr(embed);
 		}
 	}
 

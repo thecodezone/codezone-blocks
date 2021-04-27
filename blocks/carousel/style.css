@@ -13,18 +13,6 @@
     margin: var(--slide-space);
 }
 
-.block-editor .cz-block--carousel .swiper-wrapper {
-    display: block;
-}
-
-.block-editor .cz-block--carousel .swiper-wrapper > .block-editor-inner-blocks > .block-editor-block-list__layout {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.block-editor .cz-block--carousel .swiper-wrapper  > .block-editor-inner-blocks > .block-editor-block-list__layout > div {
-    flex-basis: var(--slide-basis, 100%);
-}
 
 .cz-block--carousel .swiper-wrapper {
     display: flex;

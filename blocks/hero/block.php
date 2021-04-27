@@ -68,6 +68,7 @@ $classes = cz_classes(
 				<video autoplay
 					   loop
 					   muted
+                       playsinline
 					   width="1280"
 					   height="720">
 					<?php if ($background_video_mobile): ?>

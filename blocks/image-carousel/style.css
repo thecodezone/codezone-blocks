@@ -1,0 +1,26 @@
+.cz-block--image-carousel .swiper-slide  {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cz-block--image-carousel {
+    position: relative;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.cz-block--image-carousel .swiper-button-next,
+.cz-block--image-carousel .swiper-button-prev {
+    margin-top: 0px;
+    transform: translateY(-50%);
+}
+
+@media (max-width: 650px) {
+    .cz-block--image-carousel {
+        position: relative;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}

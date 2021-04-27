@@ -7,12 +7,13 @@
  * Author URI:      https://codezone.io
  * Text Domain:     codezone-blocks
  * Domain Path:     /languages
- * Version:         0.1.0
+ * Version:         1.0.0
  *
  * @package         Codezone_Blocks
  */
 
 define('CZ_BLOCKS_URI', plugin_dir_url(__FILE__));
+define('CZ_BLOCKS_PLUGIN', __FILE__);
 
 require_once __DIR__ . '/helpers.php';
 
@@ -49,6 +50,7 @@ function cz_init_block_types() {
         require __DIR__ . '/blocks/carousel/register.php';
 	    require __DIR__ . '/blocks/container/register.php';
 		require __DIR__ . '/blocks/hero/register.php';
+        require __DIR__ . '/blocks/image-carousel/register.php';
 		require __DIR__ . '/blocks/plyr/register.php';
 		require __DIR__ . '/blocks/rule/register.php';
 		require __DIR__ . '/blocks/section/register.php';
@@ -60,6 +62,7 @@ function cz_init_block_types() {
 		require __DIR__ . '/fields/borders.php';
 		require __DIR__ . '/fields/height.php';
 		require __DIR__ . '/fields/horizontal-gradient.php';
+        require __DIR__ . '/fields/images.php';
 		require __DIR__ . '/fields/padding.php';
 		require __DIR__ . '/fields/screen-height.php';
 		require __DIR__ . '/fields/background.php';

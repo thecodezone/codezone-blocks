@@ -14,10 +14,10 @@
 	 */
 	var initializeBlock = function( block ) {
 		let container = block[0].querySelector('.swiper-container')
-		let carousel = block[0].querySelector('.cz-block--carousel')
+		let carousel = block[0].querySelector('.cz-block--image-carousel')
 		carousel = carousel ? carousel : block[0]
 		if (container) {
-			const options = block[0].dataset.swiperOptions ? JSON.parse(carousel.dataset.swiperOptions) : []
+			const options = carousel.dataset.swiperOptions ? JSON.parse(carousel.dataset.swiperOptions) : []
 			options['navigation'] = {
 				'nextEl': carousel.querySelector('.swiper-button-next'),
 				'prevEl': carousel.querySelector('.swiper-button-prev')
@@ -28,13 +28,13 @@
 
 	// Initialize each block on page load (front end).
 	document.addEventListener("DOMContentLoaded", function() {
-		document.querySelectorAll('.cz-block--carousel').forEach(function(el) {
+		document.querySelectorAll('.cz-block--image-carousel').forEach(function(el) {
 			initializeBlock([el])
 		})
 	})
 
 	// Initialize dynamic block preview (editor).
 	if( window.acf ) {
-		window.acf.addAction( 'render_block_preview/type=cz-carousel', initializeBlock );
+		window.acf.addAction( 'render_block_preview/type=cz-image-carousel', initializeBlock );
 	}
 })(jQuery);

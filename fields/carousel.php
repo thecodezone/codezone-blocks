@@ -65,7 +65,14 @@ acf_add_local_field_group([
                 'param' => 'block',
                 'operator' => '==',
                 'value' => 'acf/cz-carousel',
-            ],
-        ]
+            ]
+        ],
+        [
+            [
+                'param' => 'block',
+                'operator' => '==',
+                'value' => 'acf/cz-image-carousel',
+            ]
+        ],
     ]
 ]);
