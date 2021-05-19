@@ -7,13 +7,14 @@
  * Author URI:      https://codezone.io
  * Text Domain:     codezone-blocks
  * Domain Path:     /languages
- * Version:         1.1.0
+ * Version:         1.1.1
  *
  * @package         Codezone_Blocks
  */
 
 define('CZ_BLOCKS_URI', plugin_dir_url(__FILE__));
 define('CZ_BLOCKS_PLUGIN', __FILE__);
+
 
 require_once __DIR__ . '/helpers.php';
 
