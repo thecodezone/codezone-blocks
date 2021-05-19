@@ -7,7 +7,7 @@
  * Author URI:      https://codezone.io
  * Text Domain:     codezone-blocks
  * Domain Path:     /languages
- * Version:         1.0.0
+ * Version:         1.1.0
  *
  * @package         Codezone_Blocks
  */
@@ -71,4 +71,17 @@ function cz_init_block_types() {
 		require __DIR__ . '/fields/section.php';
 		require __DIR__ . '/fields/width.php';
 	}
+}
+
+add_filter( 'block_categories', 'cz_add_block_category', 10, 2);
+function cz_add_block_category( $categories, $post ) {
+    return array_merge(
+        $categories,
+        array(
+            array(
+                'slug' => 'cz',
+                'title' => 'CodeZone',
+            ),
+        )
+    );
 }
