@@ -1,5 +1,5 @@
 .cz-block--container.container {
-    margin: auto;
+    margin: var(--cz-container-margin, 0 auto);
     max-width: var(--cz-container-width, unset);
 }
 
