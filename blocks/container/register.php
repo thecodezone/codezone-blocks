@@ -11,7 +11,8 @@ acf_register_block_type([
     'keywords'          => array( 'container', 'center', 'align'),
     'supports'          => array(
         'mode' => false,
-        'jsx' => true
+        'jsx' => true,
+        'align' => false
     ),
     'mode'              => 'preview',
 ]);

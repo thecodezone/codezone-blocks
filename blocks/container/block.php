@@ -1,14 +1,15 @@
 <?php
 $width = get_field('cz_pixel_width');
-if ($block['align'] === 'right') {
+$justifcation = get_field('cz_justification');
+if ($justifcation === 'left') {
     $margin = '0 auto 0 0';
 }
 
-if ($block['align'] === 'right') {
+if ($justifcation === 'right') {
     $margin = '0 0 0 auto';
 }
 
-if ($block['align'] === 'center') {
+if ($justifcation === 'center') {
     $margin = '0 auto';
 }
 

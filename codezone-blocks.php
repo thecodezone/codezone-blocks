@@ -71,6 +71,7 @@ function cz_init_block_types() {
 		require __DIR__ . '/fields/video-embed.php';
 		require __DIR__ . '/fields/section.php';
 		require __DIR__ . '/fields/width.php';
+		require __DIR__ . '/fields/justification.php';
 	}
 }
 
