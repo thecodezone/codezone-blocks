@@ -1,4 +1,4 @@
-(function($){
+(function(){
 
 	/**
 	 * initializeBlock
@@ -37,4 +37,4 @@
 	if( window.acf ) {
 		window.acf.addAction( 'render_block_preview/type=cz-carousel', initializeBlock );
 	}
-})(jQuery);
+})();
