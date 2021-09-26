@@ -69,7 +69,7 @@ acf_add_local_field_group([
 			'append' => 'px',
 			'max' => 10,
 			'conditional_logic' => [$has_borders]
-		],
+		]
 	],
 	'location' => [
 		[
@@ -86,5 +86,12 @@ acf_add_local_field_group([
 				'value' => 'acf/cz-section',
 			],
 		],
+        [
+            [
+                'param' => 'block',
+                'operator' => '==',
+                'value' => 'acf/cz-card',
+            ],
+        ],
 	]
 ]);

@@ -115,5 +115,12 @@ acf_add_local_field_group([
 				'value' => 'acf/cz-section',
 			],
 		],
+        [
+            [
+                'param' => 'block',
+                'operator' => '==',
+                'value' => 'acf/cz-card',
+            ],
+        ],
 	]
 ]);

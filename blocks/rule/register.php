@@ -1,5 +1,5 @@
 <?php
-wp_enqueue_style( 'cz-rule', CZ_BLOCKS_URI . 'blocks/rule/style.css', [], get_plugin_data(CZ_BLOCKS_PLUGIN)['Version']);
+wp_enqueue_style( 'cz-rule', CZ_BLOCKS_URI . 'blocks/rule/style.css', [], CZ_BLOCKS_VERSION);
 
 acf_register_block_type([
 	'name'              => 'cz-rule',

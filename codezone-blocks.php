@@ -12,8 +12,9 @@
  * @package         Codezone_Blocks
  */
 
-define('CZ_BLOCKS_URI', plugin_dir_url(__FILE__));
 define('CZ_BLOCKS_PLUGIN', __FILE__);
+define('CZ_BLOCKS_URI', plugin_dir_url(CZ_BLOCKS_PLUGIN));
+define('CZ_BLOCKS_VERSION', get_file_data(CZ_BLOCKS_PLUGIN, ['Version' => 'Version'], false));
 
 
 require_once __DIR__ . '/helpers.php';
@@ -48,6 +49,7 @@ add_action('acf/init', 'cz_init_block_types');
 function cz_init_block_types() {
 
 	if( function_exists('acf_register_block_type') ) {
+        require __DIR__ . '/blocks/card/register.php';
         require __DIR__ . '/blocks/carousel/register.php';
 	    require __DIR__ . '/blocks/container/register.php';
 		require __DIR__ . '/blocks/hero/register.php';
@@ -72,6 +74,7 @@ function cz_init_block_types() {
 		require __DIR__ . '/fields/section.php';
 		require __DIR__ . '/fields/width.php';
 		require __DIR__ . '/fields/justification.php';
+        require __DIR__ . '/fields/rounded-corners.php';
 	}
 }
 

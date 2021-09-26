@@ -1,0 +1,51 @@
+.cz-block--card {
+	--cz-card-padding-y-default: var(--cz-card-padding-y, 10px);
+	--cz-card-padding-x-default: var(--cz-card-padding-x, 10px);
+	position: relative;
+	padding: var(--cz-card-padding-top, var(--cz-card-padding-y-default)) var(--cz-card-padding-right, var(--cz-card-padding-x-default)) var(--cz-card-padding-bottom, var(--cz-card-padding-y-default)) var(--cz-card-padding-left, var(--cz-card-padding-x-default));
+	background-color: var(--cz-card-background-color, transparent);
+	background-image: var(--cz-card-background-image);
+	background-size: cover;
+	color: var(--cz-card-text-color, inherit);
+	background-position: center center;
+	border-top: solid var(--cz-card-border-color, initial) var(--cz-card-border-top, 0px);
+	border-right: solid var(--cz-card-border-color, initial) var(--cz-card-border-right, 0px);
+	border-bottom: solid var(--cz-card-border-color, initial) var(--cz-card-border-bottom, 0px);
+	border-left: solid var(--cz-card-border-color, initial) var(--cz-card-border-left, 0px);
+	border-radius: var(--cz-card-border-radius, 0);
+}
+
+.cz-block--card .background-overlay {
+	position: absolute;
+	z-index: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: var(--cz-card-background-overlay-color, transparent);
+}
+
+.block-editor .cz-block--card__wrapper,
+.block-editor .cz-block--card .cz-block--card__inner.container {
+	border: dashed 1px #22A5AD;
+}
+
+.cz-block--card.cz-block--has-text-color p,
+.cz-block--card.cz-block--has-text-color li,
+.cz-block--card.cz-block--has-text-color h1,
+.cz-block--card.cz-block--has-text-color h2,
+.cz-block--card.cz-block--has-text-color h3,
+.cz-block--card.cz-block--has-text-color h4,
+.cz-block--card.cz-block--has-text-color h5,
+.cz-block--card.cz-block--has-text-color h6 {
+	color: inherit;
+}
+
+@media (max-width: 600px) {
+	.cz-block--card {
+		--cz-card-padding-y-default: var(--cz-card-padding-y-mobile, 25px);
+		--cz-card-padding-x-default: var(--cz-card-padding-x-mobile, 25px);
+		padding: var(--cz-card-padding-top-mobile, var(--cz-card-padding-y-default)) var(--cz-card-padding-right-mobile, var(--cz-card-padding-x-default)) var(--cz-card-padding-right-mobile, var(--cz-card-padding-y-default)) var(--cz-card-padding-left-mobile, var(--cz-card-padding-x-default));
+		background-image: var(--cz-card-background-image-mobile, var(--cz-card-background-image));
+	}
+}

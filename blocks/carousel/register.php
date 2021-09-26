@@ -9,8 +9,8 @@ acf_register_block_type([
     'enqueue_assets' => function(){
         wp_enqueue_script( 'cz-swiper-js', 'https://unpkg.com/swiper/swiper-bundle.min.js');
         wp_enqueue_style( 'cz-swiper-css', 'https://unpkg.com/swiper/swiper-bundle.min.css');
-        wp_enqueue_style( 'cz-carousel', CZ_BLOCKS_URI . 'blocks/carousel/style.css', [], get_plugin_data(CZ_BLOCKS_PLUGIN)['Version']);
-        wp_enqueue_script( 'cz-carousel', CZ_BLOCKS_URI . 'blocks/carousel/script.js', [], get_plugin_data(CZ_BLOCKS_PLUGIN)['Version'], true );
+        wp_enqueue_style( 'cz-carousel', CZ_BLOCKS_URI . 'blocks/carousel/style.css', [], CZ_BLOCKS_VERSION);
+        wp_enqueue_script( 'cz-carousel', CZ_BLOCKS_URI . 'blocks/carousel/script.js', [], CZ_BLOCKS_VERSION, true );
     },
     'category' => 'cz',
     'keywords' => ['carousel', 'swiper'],
