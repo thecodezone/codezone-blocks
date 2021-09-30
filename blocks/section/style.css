@@ -100,7 +100,7 @@
 	}
 
 	.cz-block--section {
-		padding: var(--cz-section-padding-top-mobile, var(--cz-section-padding-y-default)) var(--cz-section-padding-right-mobile, var(--cz-section-padding-x-default)) var(--cz-section-padding-right-mobile, var(--cz-section-padding-y-default)) var(--cz-section-padding-left-mobile, var(--cz-section-padding-x-default));
+		padding: var(--cz-section-padding-top-mobile, var(--cz-section-padding-y-default)) var(--cz-section-padding-right-mobile, var(--cz-section-padding-x-default)) var(--cz-section-padding-bottom-mobile, var(--cz-section-padding-y-default)) var(--cz-section-padding-left-mobile, var(--cz-section-padding-x-default));
 		background-image: var(--cz-section-background-image-mobile, var(--cz-section-background-image));
 	}
 }

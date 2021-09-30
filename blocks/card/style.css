@@ -45,7 +45,7 @@
 	.cz-block--card {
 		--cz-card-padding-y-default: var(--cz-card-padding-y-mobile, 25px);
 		--cz-card-padding-x-default: var(--cz-card-padding-x-mobile, 25px);
-		padding: var(--cz-card-padding-top-mobile, var(--cz-card-padding-y-default)) var(--cz-card-padding-right-mobile, var(--cz-card-padding-x-default)) var(--cz-card-padding-right-mobile, var(--cz-card-padding-y-default)) var(--cz-card-padding-left-mobile, var(--cz-card-padding-x-default));
+		padding: var(--cz-card-padding-top-mobile, var(--cz-card-padding-y-default)) var(--cz-card-padding-right-mobile, var(--cz-card-padding-x-default)) var(--cz-card-padding-bottom-mobile, var(--cz-card-padding-y-default)) var(--cz-card-padding-left-mobile, var(--cz-card-padding-x-default));
 		background-image: var(--cz-card-background-image-mobile, var(--cz-card-background-image));
 	}
 }

@@ -98,7 +98,7 @@
 	}
 
 	.cz-block--hero {
-		padding: var(--cz-hero-padding-top-mobile, var(--cz-hero-padding-y-default)) var(--cz-hero-padding-right-mobile, var(--cz-hero-padding-x-default)) var(--cz-hero-padding-right-mobile, var(--cz-hero-padding-y-default)) var(--cz-hero-padding-left-mobile, var(--cz-hero-padding-x-default));
+		padding: var(--cz-hero-padding-top-mobile, var(--cz-hero-padding-y-default)) var(--cz-hero-padding-right-mobile, var(--cz-hero-padding-x-default)) var(--cz-hero-padding-bottom-mobile, var(--cz-hero-padding-y-default)) var(--cz-hero-padding-left-mobile, var(--cz-hero-padding-x-default));
 		background-image: var(--cz-hero-background-image-mobile, var(--cz-hero-background-image));
 	}
 }
