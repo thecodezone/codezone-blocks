@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:     CodeZone Blocks
- * Plugin URI:      https://codezone.io
+ * Plugin URI:      https://github.com/thecodezone/codezone-blocks
  * Description:     CodeZone block editor suite.
  * Author:          CodeZone
  * Author URI:      https://codezone.io
