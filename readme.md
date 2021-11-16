@@ -3,7 +3,7 @@ Codezone Blocks
 
 A suite of block editor blocks by CodeZone.
 
-**Current blocks: **
+## Current blocks:
 
 - Card
 - Carousel
