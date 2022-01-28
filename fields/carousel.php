@@ -1,15 +1,15 @@
 <?php
 
-$has_pagination = [
-	'field' => 'cz_carousel_pagination',
-	'operator' => '==',
-	'value' => '1',
-];
-
 acf_add_local_field_group([
     'key' => 'cz_carousel',
     'title' => 'Carousel',
     'fields' => [
+        [
+			'key' => 'cz_carousel_theme_color',
+			'label' => 'Pagination Active Color',
+			'name' => 'cz_carousel_theme_color',
+			'type' => 'color_picker',
+		],
         [
 
             'key' => 'cz_carousel_auto_height',
@@ -72,13 +72,6 @@ acf_add_local_field_group([
             'ui' => true,
             'default' => false
         ],
-        [
-			'key' => 'cz_carousel_pagination_active_color',
-			'label' => 'Pagination Active Color',
-			'name' => 'cz_carousel_pagination_active_color',
-			'type' => 'color_picker',
-			'conditional_logic' => [$has_pagination]
-		],
     ],
     'location' => [
         [

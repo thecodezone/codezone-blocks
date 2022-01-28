@@ -1,4 +1,5 @@
 <?php
+$theme_color = get_field('cz_carousel_theme_color');
 $auto_height = get_field('cz_carousel_auto_height') !== null ? get_field('cz_carousel_auto_height') : false;
 $auto_play = get_field('cz_carousel_auto_play') !== null ? get_field('cz_carousel_auto_play') : false;
 $slides_per_view = get_field('cz_carousel_slides_per_view') ? (int) get_field('cz_carousel_slides_per_view') : 1;
@@ -6,7 +7,6 @@ $slides_per_group = get_field('cz_carousel_slides_per_group') ? (int) get_field(
 $space_between = get_field('cz_carousel_space_between') ? (int) get_field('cz_carousel_space_between') :30;
 $loop = get_field('cz_carousel_auto_height') !== null ? get_field('cz_carousel_auto_height') : false;
 $pagination = get_field('cz_carousel_pagination') !== null ? get_field('cz_carousel_pagination') : false;
-$pagination_active_color = get_field('cz_carousel_pagination_active_color');
 
 $classes = cz_classes(
     'cz-block',
@@ -20,7 +20,8 @@ $options = [
     'slidesPerView' => 1,
     'slidesPerGroup' => 1,
     'centeredSlides' => false,
-    'simulateTouch' => false,
+    'simulateTouch' => true,
+    'shortSwipes' => true,
     'spaceBetween' => $space_between,
     'autoHeight' => $auto_height,
     'autoplay' => $auto_play ? ['delay' => 5000] : false,
@@ -41,7 +42,7 @@ $options = [
 
 ?>
 
-<style> .swiper-pagination-bullet-active { background: <?php echo $pagination_active_color; ?>; } </style>
+<style> .swiper-pagination-bullet-active { background: <?php echo $theme_color; ?>; } </style>
 
 <div
         class="<?= $classes ?>"
