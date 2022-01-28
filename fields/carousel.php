@@ -58,6 +58,14 @@ acf_add_local_field_group([
             'step_size' => 1,
             'max' => 50
         ],
+        [
+            'key' => 'cz_carousel_pagination',
+            'label' => 'Pagination',
+            'name' => 'cz_carousel_pagination',
+            'type' => 'true_false',
+            'ui' => true,
+            'default' => false
+        ],
     ],
     'location' => [
         [
