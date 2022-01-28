@@ -1,10 +1,12 @@
 <?php
+$theme_color = get_field('cz_carousel_theme_color');
 $auto_height = get_field('cz_carousel_auto_height') !== null ? get_field('cz_carousel_auto_height') : false;
 $auto_play = get_field('cz_carousel_auto_play') !== null ? get_field('cz_carousel_auto_play') : false;
 $slides_per_view = get_field('cz_carousel_slides_per_view') ? (int) get_field('cz_carousel_slides_per_view') : 1;
 $slides_per_group = get_field('cz_carousel_slides_per_group') ? (int) get_field('cz_carousel_slides_per_group') : $slides_per_view;
 $space_between = get_field('cz_carousel_space_between') ? (int) get_field('cz_carousel_space_between') :30;
 $loop = get_field('cz_carousel_auto_height') !== null ? get_field('cz_carousel_auto_height') : false;
+$pagination = get_field('cz_carousel_pagination') !== null ? get_field('cz_carousel_pagination') : false;
 
 $classes = cz_classes(
     'cz-block',
@@ -18,11 +20,14 @@ $options = [
     'slidesPerView' => 1,
     'slidesPerGroup' => 1,
     'centeredSlides' => false,
-    'simulateTouch' => false,
+    'simulateTouch' => true,
+    'shortSwipes' => true,
     'spaceBetween' => $space_between,
     'autoHeight' => $auto_height,
     'autoplay' => $auto_play ? ['delay' => 5000] : false,
     'loop' => $loop,
+    'simulateTouch' => true,
+    'pagination'  => $pagination ? [ 'el' => ".swiper-pagination" ] : false,
     'breakpoints' =>  [
         '1076' => [
             'slidesPerView' => $slides_per_view,
@@ -37,6 +42,8 @@ $options = [
 
 ?>
 
+<style> .swiper-pagination-bullet-active { background: <?php echo $theme_color; ?>; } </style>
+
 <div
         class="<?= $classes ?>"
         data-swiper-options="<?= esc_attr(wp_json_encode($options)) ?>"
@@ -46,6 +53,7 @@ $options = [
         <div class="swiper-wrapper">
             <InnerBlocks  allowedBlocks="<?php echo esc_attr(wp_json_encode( [ 'acf/cz-carousel-slide'] ) ) ?>"/>
         </div>
+        <div class="swiper-pagination"></div>
     </div>
 
     <div class="swiper-button-prev"></div>

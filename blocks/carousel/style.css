@@ -1,46 +1,52 @@
 .block-editor .cz-block--carousel,
 .block-editor .cz-block--carousel-slide {
-    border: dashed 1px #22A5AD;
+  border: dashed 1px #22a5ad;
 }
 
 .block-editor .cz-block--carousel,
 .block-editor .cz-block--carousel-slide {
-    padding: 25px;
-    box-sizing: border-box;
+  padding: 25px;
+  box-sizing: border-box;
 }
 
 .block-editor .cz-block--carousel-slide {
-    margin: var(--slide-space);
+  margin: var(--slide-space);
 }
 
-
 .cz-block--carousel .swiper-wrapper {
-    display: flex;
-    align-items: stretch;
+  display: flex;
+  align-items: stretch;
 }
 
 .cz-block--carousel .swiper-slide > .wp-block-image:only-child {
-    height: 100%;
-    display: flex;
-    align-items: center;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .cz-block--carousel {
-    position: relative;
-    padding-left: 100px;
-    padding-right: 100px;
+  position: relative;
+  padding-left: 100px;
+  padding-right: 100px;
 }
 
 .cz-block--carousel .swiper-button-next,
 .cz-block--carousel .swiper-button-prev {
-    margin-top: 0px;
-    transform: translateY(-50%);
+  margin-top: 0px;
+  transform: translateY(-50%);
 }
 
 @media (max-width: 650px) {
-    .cz-block--carousel {
-        position: relative;
-        padding-left: 50px;
-        padding-right: 50px;
-    }
+  .cz-block--carousel {
+    position: relative;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: -20px;
 }

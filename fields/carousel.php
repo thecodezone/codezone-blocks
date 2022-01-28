@@ -5,6 +5,12 @@ acf_add_local_field_group([
     'title' => 'Carousel',
     'fields' => [
         [
+			'key' => 'cz_carousel_theme_color',
+			'label' => 'Pagination Active Color',
+			'name' => 'cz_carousel_theme_color',
+			'type' => 'color_picker',
+		],
+        [
 
             'key' => 'cz_carousel_auto_height',
             'label' => 'Auto height',
@@ -57,6 +63,14 @@ acf_add_local_field_group([
             'default_value' => '25',
             'step_size' => 1,
             'max' => 50
+        ],
+        [
+            'key' => 'cz_carousel_pagination',
+            'label' => 'Pagination',
+            'name' => 'cz_carousel_pagination',
+            'type' => 'true_false',
+            'ui' => true,
+            'default' => false
         ],
     ],
     'location' => [
