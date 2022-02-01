@@ -59,16 +59,19 @@ $options = [
             <InnerBlocks  allowedBlocks="<?php echo esc_attr(wp_json_encode( [ 'acf/cz-carousel-slide'] ) ) ?>"/>
         </div>
 
-        <?php if($pagination){ 
-            echo '<div class="swiper-pagination"></div>';
-        } ?>
-
+        <?php if($pagination): ?>
+            <div class="swiper-pagination"></div>
+        <?php endif; ?>
     </div>
 
-    <?php if($navigation){
-        echo '<div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>';
-     } ?>
+    <?php if($navigation): ?>
+            <div class="swiper-pagination"></div>
+        <?php endif; ?>
+
+    <?php if($navigation): ?>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    <?php endif; ?>
 
 </div>
 
