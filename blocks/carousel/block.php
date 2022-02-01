@@ -27,7 +27,6 @@ $options = [
     'autoHeight' => $auto_height,
     'autoplay' => $auto_play ? ['delay' => 5000] : false,
     'loop' => $loop,
-    'simulateTouch' => true,
     'pagination'  => $pagination ? [ 'el' => ".swiper-pagination" ] : false,
     'navigation' => $navigation ? [ 'nextEl' => ".swiper-button-next", 'prevEl' => ".swiper-button-prev" ] : false,
     'breakpoints' =>  [
