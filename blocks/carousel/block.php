@@ -44,14 +44,16 @@ $options = [
 
 ?>
 
-<style> 
-.swiper-button-prev, .swiper-button-next { color: <?php echo $theme_color; ?> !important; }
-.swiper-pagination-bullet-active { background: <?php echo $theme_color; ?> !important; } </style>
+
 
 <div
         class="<?= $classes ?>"
         data-swiper-options="<?= esc_attr(wp_json_encode($options)) ?>"
-        style="--slide-basis: <?php echo 100 / $slides_per_view ?>%; --slide-space: <?php $space_between ?>px;"
+        style="
+            --slide-basis: <?php echo 100 / $slides_per_view ?>%; 
+            --slide-space: <?php $space_between ?>px;
+            --swiper-theme-color: <?php echo $theme_color; ?>;
+        "
 >
     <div class="swiper-container">
         <div class="swiper-wrapper">
