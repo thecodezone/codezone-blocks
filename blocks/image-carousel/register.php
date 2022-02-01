@@ -1,13 +1,12 @@
 <?php
-wp_enqueue_script( 'cz-swiper-js', 'https://unpkg.com/swiper/swiper-bundle.min.js');
-wp_enqueue_style( 'cz-swiper-css', 'https://unpkg.com/swiper/swiper-bundle.min.css');
-
 acf_register_block_type([
     'name' => 'cz-image-carousel',
     'title' => 'Image Carousel',
     'description' => 'An image carousel.',
     'render_callback' => cz_render_acf_block('cz-image-carousel', __dir__ . '/block.php'),
     'enqueue_assets' => function(){
+        wp_enqueue_script( 'cz-swiper-js', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.4.1/swiper-bundle.min.js');
+        wp_enqueue_style( 'cz-swiper-css', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.4.1/swiper-bundle.css');
         wp_enqueue_style( 'cz-image-carousel', CZ_BLOCKS_URI . 'blocks/image-carousel/style.css', [], CZ_BLOCKS_VERSION);
         wp_enqueue_script( 'cz-image-carousel', CZ_BLOCKS_URI . 'blocks/image-carousel/script.js', [], CZ_BLOCKS_VERSION, true );
     },
