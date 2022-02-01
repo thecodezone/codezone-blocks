@@ -4,9 +4,10 @@ $auto_height = get_field('cz_carousel_auto_height') !== null ? get_field('cz_car
 $auto_play = get_field('cz_carousel_auto_play') !== null ? get_field('cz_carousel_auto_play') : false;
 $slides_per_view = get_field('cz_carousel_slides_per_view') ? (int) get_field('cz_carousel_slides_per_view') : 1;
 $slides_per_group = get_field('cz_carousel_slides_per_group') ? (int) get_field('cz_carousel_slides_per_group') : $slides_per_view;
-$space_between = get_field('cz_carousel_space_between') ? (int) get_field('cz_carousel_space_between') :30;
+$space_between = get_field('cz_carousel_space_between') ? (int) get_field('cz_carousel_space_between') : 30;
 $loop = get_field('cz_carousel_auto_height') !== null ? get_field('cz_carousel_auto_height') : false;
 $pagination = get_field('cz_carousel_pagination') !== null ? get_field('cz_carousel_pagination') : false;
+$navigation = get_field('cz_carousel_navigation') !== null ? get_field('cz_carousel_navigation') : false;
 
 $classes = cz_classes(
     'cz-block',
@@ -28,6 +29,7 @@ $options = [
     'loop' => $loop,
     'simulateTouch' => true,
     'pagination'  => $pagination ? [ 'el' => ".swiper-pagination" ] : false,
+    'navigation' => $navigation ? [ 'nextEl' => ".swiper-button-next", 'prevEl' => ".swiper-button-prev" ] : false,
     'breakpoints' =>  [
         '1076' => [
             'slidesPerView' => $slides_per_view,
@@ -42,7 +44,9 @@ $options = [
 
 ?>
 
-<style> .swiper-pagination-bullet-active { background: <?php echo $theme_color; ?>; } </style>
+<style> 
+.swiper-button-prev, .swiper-button-next { color: <?php echo $theme_color; ?> !important; }
+.swiper-pagination-bullet-active { background: <?php echo $theme_color; ?> !important; } </style>
 
 <div
         class="<?= $classes ?>"
@@ -53,10 +57,17 @@ $options = [
         <div class="swiper-wrapper">
             <InnerBlocks  allowedBlocks="<?php echo esc_attr(wp_json_encode( [ 'acf/cz-carousel-slide'] ) ) ?>"/>
         </div>
-        <div class="swiper-pagination"></div>
+
+        <?php if($pagination){ 
+            echo '<div class="swiper-pagination"></div>';
+        } ?>
+
     </div>
 
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
+    <?php if($navigation){
+        echo '<div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>';
+     } ?>
+
 </div>
 
