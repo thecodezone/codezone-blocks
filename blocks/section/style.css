@@ -10,7 +10,7 @@
 	background-image: var(--cz-section-background-image);
 	background-size: cover;
 	color: var(--cz-section-text-color, inherit);
-	background-position: center center;
+	background-position: var(--cz-section-background-position, center center);
 	border-top: solid var(--cz-section-border-color, initial) var(--cz-section-border-top, 0px);
 	border-right: solid var(--cz-section-border-color, initial) var(--cz-section-border-right, 0px);
 	border-bottom: solid var(--cz-section-border-color, initial) var(--cz-section-border-bottom, 0px);

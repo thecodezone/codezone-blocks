@@ -10,7 +10,7 @@
 	background-image: var(--cz-hero-background-image);
 	background-size: cover;
 	color: var(--cz-hero-text-color, inherit);
-	background-position: center center;
+	background-position: var(--cz-hero-background-position, center center);
 	border-top: solid var(--cz-hero-border-color, initial) var(--cz-hero-border-top, 0px);
 	border-right: solid var(--cz-hero-border-color, initial) var(--cz-hero-border-right, 0px);
 	border-bottom: solid var(--cz-hero-border-color, initial) var(--cz-hero-border-bottom, 0px);
