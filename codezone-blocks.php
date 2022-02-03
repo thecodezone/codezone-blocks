@@ -7,7 +7,7 @@
  * Author URI:      https://codezone.io
  * Text Domain:     codezone-blocks
  * Domain Path:     /languages
- * Version:         1.2.3
+ * Version:         1.3.0
  * GitHub Plugin URI: thecodezone/codezone-blocks
  *
  * @package         Codezone_Blocks
@@ -47,17 +47,23 @@ function cz_render_acf_block($block_name, $template) {
 };
 
 add_action('acf/init', 'cz_init_block_types');
+
 function cz_init_block_types() {
+    $block_registration_files = apply_filters('CZ_block_registration_files', [
+        'cz_card' => __DIR__ . '/blocks/card/register.php',
+        'cz-carousel' => __DIR__ . '/blocks/carousel/register.php',
+        'cz-container' => __DIR__ . '/blocks/container/register.php',
+        'cz-hero' => __DIR__ . '/blocks/hero/register.php',
+        'cz-image-carousel' =>  __DIR__ . '/blocks/image-carousel/register.php',
+        'cz-plyr' => __DIR__ . '/blocks/plyr/register.php',
+        'cz-rule' => __DIR__ . '/blocks/rule/register.php',
+        'cz_section' => __DIR__ . '/blocks/section/register.php'
+    ]);
 
 	if( function_exists('acf_register_block_type') ) {
-        require __DIR__ . '/blocks/card/register.php';
-        require __DIR__ . '/blocks/carousel/register.php';
-	    require __DIR__ . '/blocks/container/register.php';
-		require __DIR__ . '/blocks/hero/register.php';
-        require __DIR__ . '/blocks/image-carousel/register.php';
-		require __DIR__ . '/blocks/plyr/register.php';
-		require __DIR__ . '/blocks/rule/register.php';
-		require __DIR__ . '/blocks/section/register.php';
+	    foreach($block_registration_files as $file) {
+            require $file;
+        }
 	}
 
 	if( function_exists('acf_add_local_field_group') ) {
