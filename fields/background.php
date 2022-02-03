@@ -61,7 +61,7 @@ acf_add_local_field_group( [
         [
 
             'key'               => 'cz_background_position_left',
-            'label'             => 'Background Top Position',
+            'label'             => 'Background Left Position',
             'name'              => 'cz_background_position_left',
             'type'              => 'range',
             'default_value'     => 50,
@@ -73,7 +73,7 @@ acf_add_local_field_group( [
         [
 
             'key'               => 'cz_background_position_top',
-            'label'             => 'Background Left Position',
+            'label'             => 'Background Top Position',
             'name'              => 'cz_background_position_top',
             'type'              => 'range',
             'default_value'     => 50,
