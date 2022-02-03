@@ -6,7 +6,7 @@ acf_add_local_field_group([
     'fields' => [
         [
 			'key' => 'cz_carousel_theme_color',
-			'label' => 'Pagination Active Color',
+			'label' => 'Carousel Theme Color',
 			'name' => 'cz_carousel_theme_color',
 			'type' => 'color_picker',
 		],
@@ -66,8 +66,16 @@ acf_add_local_field_group([
         ],
         [
             'key' => 'cz_carousel_pagination',
-            'label' => 'Pagination',
+            'label' => 'Pagination (Dots)',
             'name' => 'cz_carousel_pagination',
+            'type' => 'true_false',
+            'ui' => true,
+            'default' => false
+        ],
+        [
+            'key' => 'cz_carousel_navigation',
+            'label' => 'Navigation (Arrows)',
+            'name' => 'cz_carousel_navigation',
             'type' => 'true_false',
             'ui' => true,
             'default' => false
