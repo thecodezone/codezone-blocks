@@ -10,6 +10,11 @@ acf_add_local_field_group([
 	'key' => 'cz_video_group',
 	'title' => 'Video',
 	'fields' => [
+        [
+            'key'    => 'cz_video_accordion',
+            'label'  => 'Video',
+            'type'    => 'accordion',
+        ],
 		[
 
 			'key' => 'cz_has_video',

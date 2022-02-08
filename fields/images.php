@@ -4,6 +4,11 @@ acf_add_local_field_group([
 	'key' => 'cz_images_group',
 	'title' => 'Images',
 	'fields' => [
+        [
+            'key'    => 'cz_images_accordion',
+            'label'  => 'Images',
+            'type'    => 'accordion',
+        ],
 		[
 			'key' => 'cz_images',
 			'label' => 'Images',

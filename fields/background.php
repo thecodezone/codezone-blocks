@@ -1,11 +1,5 @@
 <?php
 
-$has_background = [
-    'field'    => 'cz_has_background',
-    'operator' => '==',
-    'value'    => '1',
-];
-
 $has_background_position = [
     'field'    => 'cz_has_background_position',
     'operator' => '==',
@@ -15,15 +9,17 @@ $has_background_position = [
 acf_add_local_field_group( [
     'key'      => 'cz_background',
     'title'    => 'Background',
+    'style' => 'default',
     'fields'   => [
         [
-
-            'key'     => 'cz_has_background',
-            'label'   => 'Background',
-            'name'    => 'cz_has_background',
-            'type'    => 'true_false',
-            'ui'      => true,
-            'default' => false
+            'key'    => 'cz_background_accordion',
+            'label'  => 'Background',
+            'type'    => 'accordion',
+        ],
+        [
+            'key'    => 'cz_background_desktop_tab',
+            'label'  => 'Desktop',
+            'type'    => 'tab',
         ],
         [
 
@@ -31,7 +27,6 @@ acf_add_local_field_group( [
             'label'             => 'Background Color',
             'name'              => 'cz_background_color',
             'type'              => 'color_picker',
-            'conditional_logic' => [ $has_background ]
         ],
         [
 
@@ -42,21 +37,12 @@ acf_add_local_field_group( [
             'default_value'     => 0,
             'step_size'         => 1,
             'max'               => 10,
-            'conditional_logic' => [ $has_background ]
         ],
         [
             'key'               => 'cz_background_image',
             'label'             => 'Background Image',
             'name'              => 'cz_background_image',
             'type'              => 'image',
-            'conditional_logic' => [ $has_background ]
-        ],
-        [
-            'key'               => 'cz_background_image_mobile',
-            'label'             => 'Background Image Mobile',
-            'name'              => 'cz_background_image_mobile',
-            'type'              => 'image',
-            'conditional_logic' => [ $has_background ]
         ],
         [
 
@@ -68,7 +54,6 @@ acf_add_local_field_group( [
             'step_size'         => 10,
             'max'               => 100,
             'append'            => '%',
-            'conditional_logic' => [ $has_background ]
         ],
         [
 
@@ -80,7 +65,17 @@ acf_add_local_field_group( [
             'step_size'         => 10,
             'max'               => 100,
             'append'            => '%',
-            'conditional_logic' => [ $has_background ]
+        ],
+        [
+            'key'    => 'cz_background_mobile_tab',
+            'label'  => 'Mobile',
+            'type'    => 'tab',
+        ],
+        [
+            'key'               => 'cz_background_image_mobile',
+            'label'             => 'Background Image',
+            'name'              => 'cz_background_image_mobile',
+            'type'              => 'image',
         ],
     ],
     'location' => [

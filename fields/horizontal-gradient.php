@@ -4,6 +4,11 @@ acf_add_local_field_group([
 	'key' => 'cz_horizontal_gradient',
 	'title' => 'Gradient',
 	'fields' => [
+        [
+            'key'    => 'cz_horizontal_gradient_accordion',
+            'label'  => 'Gradient',
+            'type'    => 'accordion',
+        ],
 		[
 
 			'key' => 'cz_left_color',

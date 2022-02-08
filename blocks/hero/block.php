@@ -24,6 +24,7 @@ $border_right = get_field('cz_right_border');
 $border_bottom = get_field('cz_bottom_border');
 $border_left = get_field('cz_left_border');
 $height = get_field('cz_screen_height');
+$height_mobile = get_field('cz_screen_height_mobile');
 
 $classes = cz_classes(
 	'cz-block',
@@ -63,6 +64,7 @@ $classes = cz_classes(
 		<?php if ($border_bottom !== null) : ?> --cz-hero-border-bottom: <?= esc_attr($border_bottom) . 'px' ?>; <?php endif; ?>
 		<?php if ($border_left !== null) : ?> --cz-hero-border-left: <?= esc_attr($border_left) . 'px' ?>; <?php endif; ?>
 		<?php if ($height) : ?> --cz-height: <?= esc_attr($height) . 'vh' ?>; <?php endif; ?>
+        <?php if ($height_mobile) : ?> --cz-height-mobile: <?= esc_attr($height_mobile) . 'vh' ?>; <?php endif; ?>
 			"
 		<?php if ($anchor): ?>id="<?= $anchor ?>"<?php endif; ?>
 	>

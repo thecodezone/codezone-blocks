@@ -5,6 +5,11 @@ acf_add_local_field_group([
     'title' => 'Width',
     'fields' => [
         [
+            'key'    => 'cz_pixel_width_accordion',
+            'label'  => 'Width',
+            'type'    => 'accordion',
+        ],
+        [
             'key' => 'cz_pixel_width',
             'label' => 'Width',
             'name' => 'cz_pixel_width',

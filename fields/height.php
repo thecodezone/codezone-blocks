@@ -4,6 +4,11 @@ acf_add_local_field_group([
 	'key' => 'cz_height',
 	'title' => 'Height',
 	'fields' => [
+        [
+            'key'    => 'cz_height_accordion',
+            'label'  => 'Height',
+            'type'    => 'accordion',
+        ],
 		[
 			'key' => 'cz_height',
 			'label' => 'Height',

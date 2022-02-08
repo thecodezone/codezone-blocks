@@ -10,6 +10,11 @@ acf_add_local_field_group([
 	'key' => 'cz_padding',
 	'title' => 'Padding',
 	'fields' => [
+        [
+            'key'    => 'cz_padding_accordion',
+            'label'  => 'Padding',
+            'type'    => 'accordion',
+        ],
 		[
 
 			'key' => 'cz_has_padding',
@@ -19,6 +24,12 @@ acf_add_local_field_group([
 			'ui' => true,
 			'default' => false
 		],
+        [
+            'key'    => 'cz_padding_desktop_tab',
+            'label'  => 'Desktop',
+            'type'    => 'tab',
+            'conditional_logic' => [$has_padding]
+        ],
 		[
 			'key' => 'cz_top_padding',
 			'label' => 'Top Padding',
@@ -59,9 +70,15 @@ acf_add_local_field_group([
 			'append' => 'px',
 			'conditional_logic' => [$has_padding]
 		],
+        [
+            'key'    => 'cz_padding_mobile_tab',
+            'label'  => 'Mobile',
+            'type'    => 'tab',
+            'conditional_logic' => [$has_padding]
+        ],
 		[
 			'key' => 'cz_top_padding_mobile',
-			'label' => 'Top Padding Mobile',
+			'label' => 'Top Padding',
 			'name' => 'cz_top_padding_mobile',
 			'type' => 'range',
 			'default_value' => '25',
@@ -71,7 +88,7 @@ acf_add_local_field_group([
 		],
 		[
 			'key' => 'cz_right_padding_mobile',
-			'label' => 'Right Padding Mobile',
+			'label' => 'Right Padding',
 			'name' => 'cz_right_padding_mobile',
 			'type' => 'range',
 			'default_value' => '25',
@@ -81,7 +98,7 @@ acf_add_local_field_group([
 		],
 		[
 			'key' => 'cz_bottom_padding_mobile',
-			'label' => 'Bottom Padding Mobile',
+			'label' => 'Bottom Padding',
 			'name' => 'cz_bottom_padding_mobile',
 			'type' => 'range',
 			'default_value' => '25',
@@ -91,7 +108,7 @@ acf_add_local_field_group([
 		],
 		[
 			'key' => 'cz_left_padding_mobile',
-			'label' => 'Left Padding Mobile',
+			'label' => 'Left Padding',
 			'name' => 'cz_left_padding_mobile',
 			'type' => 'range',
 			'default_value' => '25',

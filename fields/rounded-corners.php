@@ -5,6 +5,11 @@ acf_add_local_field_group([
     'title' => 'Rounded Corners',
     'fields' => [
         [
+            'key'    => 'cz_corners_accordion',
+            'label'  => 'Corners',
+            'type'    => 'accordion',
+        ],
+        [
             'key' => 'cz_border_radius',
             'label' => 'Rounded Corners',
             'name' => 'cz_border_radius',

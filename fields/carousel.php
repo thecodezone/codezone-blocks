@@ -5,6 +5,11 @@ acf_add_local_field_group([
     'title' => 'Carousel',
     'fields' => [
         [
+            'key'    => 'cz_carousel_accordion',
+            'label'  => 'Carousel',
+            'type'    => 'accordion',
+        ],
+        [
 			'key' => 'cz_carousel_theme_color',
 			'label' => 'Carousel Theme Color',
 			'name' => 'cz_carousel_theme_color',
