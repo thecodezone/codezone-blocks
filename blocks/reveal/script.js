@@ -1,3 +1,5 @@
+
+
 (function(){
 
 	/**
@@ -13,21 +15,21 @@
 	 * @return  void
 	 */
 	var initializeBlock = function( block ) {
-		var embed = block[0].querySelector('.plyr__video-embed')
-		if (embed) {
-			const plyr = new Plyr(embed);
-		}
+		var el = block[0].classList.contains('cz-block--reveal') ? block[0] : block[0].querySelector('.cz-block--reveal')
+		var config = JSON.parse(el.dataset.revealConfig)
+		var animation = JSON.parse(el.dataset.revealAnimation)
+		ScrollReveal(config).reveal(el, animation)
 	}
 
 	// Initialize each block on page load (front end).
 	document.addEventListener("DOMContentLoaded", function() {
-		document.querySelectorAll('.cz-block--plyr').forEach(function(el) {
+		document.querySelectorAll('.cz-block--reveal').forEach(function(el) {
 			initializeBlock([el])
 		})
 	})
 
 	// Initialize dynamic block preview (editor).
 	if( window.acf ) {
-		window.acf.addAction( 'render_block_preview/type=cz-plyr', initializeBlock );
+		window.acf.addAction( 'render_block_preview/type=cz-reveal', initializeBlock );
 	}
 })();

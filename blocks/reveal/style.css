@@ -1,0 +1,8 @@
+.block-editor .cz-block--reveal {
+	padding: 25px;
+	border: dashed 1px #22A5AD;
+}
+
+.cz-block--hidden {
+	visibility: hidden;
+}

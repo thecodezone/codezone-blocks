@@ -57,7 +57,8 @@ function cz_init_block_types() {
         'cz-image-carousel' =>  __DIR__ . '/blocks/image-carousel/register.php',
         'cz-plyr' => __DIR__ . '/blocks/plyr/register.php',
         'cz-rule' => __DIR__ . '/blocks/rule/register.php',
-        'cz_section' => __DIR__ . '/blocks/section/register.php'
+        'cz-reveal' => __DIR__ . '/blocks/reveal/register.php',
+        'cz_section' => __DIR__ . '/blocks/section/register.php',
     ]);
 
 	if( function_exists('acf_register_block_type') ) {
@@ -81,6 +82,7 @@ function cz_init_block_types() {
 		require __DIR__ . '/fields/section.php';
 		require __DIR__ . '/fields/width.php';
 		require __DIR__ . '/fields/justification.php';
+		require __DIR__ . '/fields/reveal.php';
         require __DIR__ . '/fields/rounded-corners.php';
 	}
 }
