@@ -22,8 +22,6 @@
 		var config = JSON.parse(el.dataset.basicScrollConfig)
 		config['elem'] = el
 		config['direct'] = true
-        console.log(config)
-
         try {
             var instance = basicScroll.create(config)
             instance.start()

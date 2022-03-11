@@ -33,5 +33,6 @@ acf_register_block_type([
         'mode' => false,
         'jsx' => true
     ],
+    'parent' => ['cz-carousel'],
     'mode' => 'preview'
 ]);

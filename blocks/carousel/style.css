@@ -1,3 +1,7 @@
+:root {
+  --cz-carousel-preview-width: 60vw;
+}
+
 .block-editor .cz-block--carousel,
 .block-editor .cz-block--carousel-slide {
   border: dashed 1px #22a5ad;
@@ -13,21 +17,39 @@
   margin: var(--slide-space);
 }
 
-.cz-block--carousel .swiper-wrapper {
-  display: flex;
-  align-items: stretch;
+.block-editor .cz-block--carousel-slide {
+  min-width: 200px;
+  min-height: 200px;
 }
 
-.cz-block--carousel .swiper-slide > .wp-block-image:only-child {
-  height: 100%;
+.block-editor .carousel__preview {
+  width: 100%;
+  margin: 0 auto;
+}
+.block-editor .carousel__preview > .block-editor-inner-blocks > .block-editor-block-list__layout {
   display: flex;
-  align-items: center;
+  max-width: 60vw;
+  overflow-x: auto;
+}
+
+.block-editor .carousel__preview > .block-editor-inner-blocks > .block-editor-block-list__layout > .block-list-appender {
+  align-self: flex-start;
+}
+
+.block-editor .wp-block-acf-cz-carousel-slide {
+  min-width: calc(var(--cz-carousel-preview-width) / var(--cz-slides-per-view, 2));
 }
 
 .cz-block--carousel {
   position: relative;
   padding-left: 100px;
   padding-right: 100px;
+  overflow: hidden;
+}
+
+.cz-block--carousel .swiper-slide > .wp-block-image:only-child {
+  height: 100%;
+  align-items: center;
 }
 
 .cz-block--carousel .swiper-button-next,

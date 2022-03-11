@@ -43,35 +43,41 @@ $options = [
 
 ?>
 
+<?php if ($is_preview): ?>
+    <div class="carousel__preview" style="
+    --cz-slides-per-view: <?php echo esc_attr($slides_per_view); ?>
+">
+        <InnerBlocks  allowedBlocks="<?php echo esc_attr(wp_json_encode( [ 'acf/cz-carousel-slide'] ) ) ?>"/>
+    </div>
+<?php else: ?>
+    <div
+            class="<?= $classes ?>"
+            data-swiper-options="<?= esc_attr(wp_json_encode($options)) ?>"
+            style="
+                    --slide-basis: <?php echo 100 / $slides_per_view ?>%;
+                    --slide-space: <?php $space_between ?>px;
+                    --swiper-theme-color: <?php echo $theme_color; ?>;
+                    "
+    >
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <InnerBlocks  allowedBlocks="<?php echo esc_attr(wp_json_encode( [ 'acf/cz-carousel-slide'] ) ) ?>"/>
+            </div>
 
-
-<div
-        class="<?= $classes ?>"
-        data-swiper-options="<?= esc_attr(wp_json_encode($options)) ?>"
-        style="
-            --slide-basis: <?php echo 100 / $slides_per_view ?>%; 
-            --slide-space: <?php $space_between ?>px;
-            --swiper-theme-color: <?php echo $theme_color; ?>;
-        "
->
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <InnerBlocks  allowedBlocks="<?php echo esc_attr(wp_json_encode( [ 'acf/cz-carousel-slide'] ) ) ?>"/>
+            <?php if($pagination): ?>
+                <div class="swiper-pagination"></div>
+            <?php endif; ?>
         </div>
 
-        <?php if($pagination): ?>
+        <?php if($navigation): ?>
             <div class="swiper-pagination"></div>
+        <?php endif; ?>
+
+        <?php if($navigation): ?>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         <?php endif; ?>
     </div>
+<?php endif; ?>
 
-    <?php if($navigation): ?>
-            <div class="swiper-pagination"></div>
-        <?php endif; ?>
-
-    <?php if($navigation): ?>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-    <?php endif; ?>
-
-</div>
 
