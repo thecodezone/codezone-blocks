@@ -24,10 +24,10 @@ acf_add_local_field_group([
             'label' => 'Distance',
             'name' => 'cz_reveal_distance',
             'type' => 'range',
-            'default_value' => 0,
+            'default_value' => 200,
             'step_size' => 10,
             'append' => 'px',
-            'max' => 200
+            'max' => 1000
         ],
         [
             'key' => 'cz_reveal_duration',
@@ -83,7 +83,7 @@ acf_add_local_field_group([
             'name' => 'cz_reveal_desktop',
             'type' => 'true_false',
             'ui' => true,
-            'default' => true,
+            'default_value' => true,
             'enables/disables animations on desktop browsers.'
         ],
         [
@@ -93,7 +93,7 @@ acf_add_local_field_group([
             'name' => 'cz_reveal_mobile',
             'type' => 'true_false',
             'ui' => true,
-            'default' => true,
+            'default_value' => true,
             'instructions' => 'enables/disables animations on mobile browsers.'
         ],
         [
@@ -103,7 +103,7 @@ acf_add_local_field_group([
             'name' => 'cz_reveal_reset',
             'type' => 'true_false',
             'ui' => true,
-            'default' => false,
+            'default_value' => false,
             'instructions' => 'Return animations to their initialized state when elements leave the screen.'
         ],
     ],

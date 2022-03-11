@@ -55,6 +55,7 @@ function cz_init_block_types() {
         'cz-container' => __DIR__ . '/blocks/container/register.php',
         'cz-hero' => __DIR__ . '/blocks/hero/register.php',
         'cz-image-carousel' =>  __DIR__ . '/blocks/image-carousel/register.php',
+        'cz-parallax' => __DIR__ . '/blocks/parallax/register.php',
         'cz-plyr' => __DIR__ . '/blocks/plyr/register.php',
         'cz-rule' => __DIR__ . '/blocks/rule/register.php',
         'cz-reveal' => __DIR__ . '/blocks/reveal/register.php',
@@ -75,7 +76,8 @@ function cz_init_block_types() {
 		require __DIR__ . '/fields/horizontal-gradient.php';
         require __DIR__ . '/fields/images.php';
 		require __DIR__ . '/fields/padding.php';
-		require __DIR__ . '/fields/screen-height.php';
+        require __DIR__ . '/fields/parallax.php';
+        require __DIR__ . '/fields/screen-height.php';
 		require __DIR__ . '/fields/background.php';
 		require __DIR__ . '/fields/video.php';
 		require __DIR__ . '/fields/video-embed.php';

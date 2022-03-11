@@ -6,3 +6,7 @@
 .cz-block--hidden {
 	visibility: hidden;
 }
+
+.block-editor .cz-block--hidden {
+	visibility: visible;
+}
