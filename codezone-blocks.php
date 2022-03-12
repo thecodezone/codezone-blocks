@@ -50,6 +50,7 @@ add_action('acf/init', 'cz_init_block_types');
 
 function cz_init_block_types() {
     $block_registration_files = apply_filters('CZ_block_registration_files', [
+        'cz_accordion' => __DIR__ . '/blocks/accordion/register.php',
         'cz_card' => __DIR__ . '/blocks/card/register.php',
         'cz-carousel' => __DIR__ . '/blocks/carousel/register.php',
         'cz-container' => __DIR__ . '/blocks/container/register.php',
@@ -69,6 +70,7 @@ function cz_init_block_types() {
 	}
 
 	if( function_exists('acf_add_local_field_group') ) {
+        require __DIR__ . '/fields/accordion.php';
         require __DIR__ . '/fields/carousel.php';
 		require __DIR__ . '/fields/typography.php';
 		require __DIR__ . '/fields/borders.php';
@@ -86,6 +88,7 @@ function cz_init_block_types() {
 		require __DIR__ . '/fields/justification.php';
 		require __DIR__ . '/fields/reveal.php';
         require __DIR__ . '/fields/rounded-corners.php';
+        require __DIR__ . '/fields/transition.php';
 	}
 }
 

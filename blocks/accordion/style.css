@@ -1,0 +1,180 @@
+:root {
+  --cz-accordion-panel-padding-y-default: var(--cz-accordion-panel-padding-y, 25px);
+  --cz-accordion-panel-padding-x-default: var(--cz-accordion-panel-padding-x, 25px);
+}
+
+
+.block-editor .cz-block--accordion {
+  padding: 25px;
+  border: dashed 1px #22A5AD;
+}
+
+.block-editor .cz-accordion--loading {
+  visibility: visible;
+}
+
+.block-editor .cz-block--accordion {
+  display: block;
+}
+
+.block-editor .cz-accordion-panel__trigger {
+  display: none;
+}
+
+.cz-block--accordion {
+  display: flex;
+  width: 100%;
+}
+
+.cz-accordion-panel__inner {
+  background-color: var(--cz-accordion-panel-background-color, transparent);
+  padding: var(--cz-accordion-panel-padding-top, var(--cz-accordion-panel-padding-y-default)) var(--cz-accordion-panel-padding-right, var(--cz-accordion-panel-padding-x-default)) var(--cz-accordion-panel-padding-bottom, var(--cz-accordion-panel-padding-y-default)) var(--cz-accordion-panel-padding-left, var(--cz-accordion-panel-padding-x-default));
+  height: 100%;
+}
+
+.cz-accordion-panel__image {
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  object-fit: cover;
+  object-position: center center;
+  width: 100%;
+  height: 100%;
+}
+
+.cz-accordion-panel__content {
+  position: relative;
+  z-index: 2;
+}
+
+
+.cz-accordion--horizontal {
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.cz-accordion--horizontal .cz-block--accordion-panel {
+  width: 100%;
+  max-width: var(--cz-accordion-width, 100vw);
+}
+
+.cz-accordion--horizontal .cz-block--accordion-panel:not(.cz-accordion-panel--active) {
+  max-width: var(--cz-accordion-closed-panel-size);
+}
+
+.cz-accordion--horizontal .cz-accordion-panel__inner {
+  min-width: var(--cz-accordion-panel-width);
+  position: relative;
+  z-index: 1;
+}
+
+.cz-accordion--vertical {
+  flex-direction: column;
+}
+
+.cz-accordion--vertical .cz-block--accordion-panel:not(.cz-accordion-panel--active) {
+  max-height: var(--cz-accordion-closed-panel-size);
+}
+
+.cz-accordion--vertical .cz-block--accordion-panel {
+  height: 100%;
+  max-height: var(--cz-accordion-panel-height, var(--cz-accordion-height, 100vh));
+}
+
+.cz-block--accordion-panel .cz-accordion-panel__trigger {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.cz-block--accordion-panel.cz-accordion-panel--active .cz-accordion-panel__trigger {
+  display: none;
+}
+
+.cz-block--accordion:not(.cz-accordion--loading) .cz-block--accordion-panel {
+  transition: var(--cz-accordion-transition);
+}
+
+.cz-accordion--loading {
+  visibility: hidden;
+}
+
+.cz-block--accordion-panel {
+  position: relative;
+  color: var(--cz-accordion-panel-text-color, inherit);
+  background-position: var(--cz-accordion-panel-background-position, center center);
+  overflow: hidden;
+}
+
+.cz-block--accordion-panel.left {
+  text-align: left;
+}
+
+.cz-block--accordion-panel.right {
+  text-align: right;
+}
+
+.cz-block--accordion-panel.center {
+  text-align: center;
+}
+
+
+.block-editor .cz-block--accordion-panel {
+  width: auto;
+  left: unset;
+  right: unset;
+  margin-left: unset;
+  margin-right: unset;
+}
+
+.cz-block--accordion-panel .background-overlay {
+  pointer-events: none;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--cz-accordion-panel-background-overlay-color, transparent);
+}
+
+.block-editor .cz-block--accordion-panel {
+  border: dashed 1px #22A5AD;
+}
+
+.cz-block--accordion-panel.cz-block--has-text-color p,
+.cz-block--accordion-panel.cz-block--has-text-color li,
+.cz-block--accordion-panel.cz-block--has-text-color h1,
+.cz-block--accordion-panel.cz-block--has-text-color h2,
+.cz-block--accordion-panel.cz-block--has-text-color h3,
+.cz-block--accordion-panel.cz-block--has-text-color h4,
+.cz-block--accordion-panel.cz-block--has-text-color h5,
+.cz-block--accordion-panel.cz-block--has-text-color h6 {
+  color: inherit;
+}
+
+
+@media (max-width: 760px) {
+  :root {
+    --cz-accordion-panel-padding-y-default: var(--cz-accordion-padding-y-mobile, 25px);
+    --cz-accordion-panel-padding-x-default: var(--cz-accordion-padding-x-mobile, 25px);
+  }
+
+  .cz-accordion--horizontal .cz-block--accordion-panel:not(.cz-accordion-panel--active) {
+    max-width: var(--cz-accordion-closed-panel-size-mobile);
+  }
+
+  .cz-accordion--vertical .cz-block--accordion-panel:not(.cz-accordion-panel--active) {
+    max-width: var(--cz-accordion-closed-panel-size-mobile);
+  }
+
+  .cz-accordion-panel__inner {
+    padding: var(--cz-accordion-panel-padding-top-mobile, var(--cz-accordion-panel-padding-y-default)) var(--cz-accordion-panel-padding-right-mobile, var(--cz-accordion-panel-padding-x-default)) var(--cz-accordion-panel-padding-bottom-mobile, var(--cz-accordion-panel-padding-y-default)) var(--cz-accordion-panel-padding-left-mobile, var(--cz-accordion-panel-padding-x-default));
+  }
+}

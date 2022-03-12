@@ -139,5 +139,12 @@ acf_add_local_field_group([
                 'value' => 'acf/cz-card',
             ],
         ],
+        [
+            [
+                'param'    => 'block',
+                'operator' => '==',
+                'value'    => 'acf/cz-accordion-panel',
+            ]
+        ]
 	]
 ]);
