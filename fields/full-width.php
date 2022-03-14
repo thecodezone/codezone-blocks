@@ -1,7 +1,7 @@
 <?php
 
 acf_add_local_field_group([
-    'key' => 'cz_width',
+    'key' => 'cz_full_width',
     'title' => 'Full Width',
     'fields' => [
         [
