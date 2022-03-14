@@ -74,6 +74,7 @@ function cz_init_block_types() {
         require __DIR__ . '/fields/carousel.php';
 		require __DIR__ . '/fields/typography.php';
 		require __DIR__ . '/fields/borders.php';
+		require __DIR__ . '/fields/full-width.php';
 		require __DIR__ . '/fields/height.php';
 		require __DIR__ . '/fields/horizontal-gradient.php';
         require __DIR__ . '/fields/images.php';

@@ -9,14 +9,6 @@ acf_add_local_field_group([
             'label'  => 'Section',
             'type'    => 'accordion',
         ],
-        [
-            'key' => 'cz_full_width',
-            'label' => 'Full width',
-            'name' => 'cz_full_width',
-            'type' => 'true_false',
-            'ui' => true,
-            'default' => false
-        ],
 		[
 			'key' => 'cz_anchor',
 			'label' => 'Anchor',

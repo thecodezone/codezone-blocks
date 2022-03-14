@@ -72,6 +72,10 @@
 	z-index: 1;
 }
 
+.cz-block--has-full-width .cz-block--hero__inner {
+	width: 100%;
+}
+
 .cz-block--hero .video-wrapper {
 	position: absolute;
 	top: 0;

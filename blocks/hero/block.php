@@ -25,6 +25,7 @@ $border_bottom = get_field('cz_bottom_border');
 $border_left = get_field('cz_left_border');
 $height = get_field('cz_screen_height');
 $height_mobile = get_field('cz_screen_height_mobile');
+$full_width = get_field('cz_full_width');
 
 $classes = cz_classes(
 	'cz-block',
@@ -36,7 +37,8 @@ $classes = cz_classes(
 	$background_image_mobile ? 'cz-block--has-background-image-mobile' : null,
 	$background_video ? 'cz-block--has-background-image' : null,
 	$background_video_mobile ? 'cz-block--has-background-image-mobile' : null,
-	$text_color ? 'cz-block--has-text-color' : null
+	$text_color ? 'cz-block--has-text-color' : null,
+    $full_width ?  'cz-block--has-full-width' : null
 );
 ?>
 
