@@ -6,6 +6,7 @@ $screen_end = get_field( 'cz_parallax_screen_end' );
 $variable = get_field( 'cz_parallax_variable' );
 $from = get_field( 'cz_parallax_from' );
 $to = get_field( 'cz_parallax_to' );
+$turns = get_field( 'cz_parallax_turns' );
 $custom = get_field( 'cz_parallax_custom' );
 $props = get_field( 'cz_parallax_props' );
 
@@ -15,10 +16,10 @@ $classes = cz_classes(
     $custom ? false : 'cz-parallax--default'
 );
 
-if ($custom && $props) {
+if ( $custom && $props ) {
     try {
-        $props = json_decode($props);
-    } catch (Exception $ex) {
+        $props = json_decode( $props );
+    } catch ( Exception $ex ) {
         //Do nothing
     }
 }
@@ -27,19 +28,23 @@ if ($custom && $props) {
 
 
 <div class="<?php echo esc_attr( $classes ); ?>"
-    <?php if (!$custom || ($custom && $props)): ?>
-     data-basic-scroll-config='<?php echo wp_json_encode( [
-         'from' => $element_start . '-' . $screen_start,
-         'to'  => $element_end . '-' . $screen_end,
-         'props' => $custom ? $props : [
-             '--cz-parallax' => [
-                     "from" => $from,
-                     "to" => $to
-             ]
-         ],
-     ] ) ?>'
-     <?php endif; ?>
-     >
-    <InnerBlocks/>
+    <?php if ( !$custom || ( $custom && $props ) ): ?>
+        data-basic-scroll-config='<?php echo wp_json_encode( [
+            'from'  => $element_start . '-' . $screen_start,
+            'to'    => $element_end . '-' . $screen_end,
+            'props' => $custom ? $props : [
+                '--cz-parallax-ty' => [
+                    "from" => $from,
+                    "to"   => $to
+                ],
+                '--cz-parallax-tr' => [
+                    "from" => 0 . 'turn',
+                    "to"   => $turns . 'turn'
+                ]
+            ],
+        ] ) ?>'
+    <?php endif; ?>
+>
+    <InnerBlocks />
 </div>
 

@@ -26,7 +26,17 @@ acf_add_local_field_group([
             'instructions' => "Be sure to append a unit like 'px', '%', or 'vh'."
         ],
         [
-            'key'    => 'cz_reveal_start',
+            'key' => 'cz_parallax_turns',
+            'label' => 'Rotate',
+            'name' => 'cz_pixel_width',
+            'type' => 'range',
+            'default_value' => 0,
+            'step_size' => 1,
+            'append' => 'turn',
+            'max' => 10
+        ],
+        [
+            'key'    => 'cz_parallax_start',
             'label'  => 'Start',
             'type'    => 'accordion',
         ],
@@ -54,7 +64,7 @@ acf_add_local_field_group([
             ],
         ],
         [
-            'key'    => 'cz_reveal_end',
+            'key'    => 'cz_parallax_end',
             'label'  => 'End',
             'type'    => 'accordion',
         ],

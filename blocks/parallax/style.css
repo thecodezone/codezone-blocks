@@ -1,10 +1,16 @@
+.cz-block--parallax {
+    width: fit-content;
+    height: fit-content;
+}
+
 .block-editor .cz-block--parallax {
 	padding: 25px;
 	border: dashed 1px #22A5AD;
+    width: unset;
 }
 
 .cz-parallax--default {
-    transform: translateY(var(--cz-parallax, 0));
+    transform: translateY(var(--cz-parallax-ty, 0)) rotate(var(--cz-parallax-tr, 0));
     transition: transform .1s linear;
     will-change: transform;
 }
