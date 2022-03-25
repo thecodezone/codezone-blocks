@@ -13,7 +13,8 @@ $reset = get_field( 'cz_reveal_reset' );
 $classes = cz_classes(
     'cz-block',
     'cz-block--reveal',
-    'cz-block--hidden'
+    'cz-block--hidden',
+    $block['className'] ?? null
 );
 
 ?>

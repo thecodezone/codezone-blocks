@@ -11,7 +11,8 @@ $navigation = get_field('cz_carousel_navigation') !== null ? get_field('cz_carou
 
 $classes = cz_classes(
     'cz-block',
-    'cz-block--carousel'
+    'cz-block--carousel',
+    $block['className'] ?? null
 );
 
 $options = [

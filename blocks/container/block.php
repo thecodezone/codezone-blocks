@@ -16,7 +16,8 @@ if ($justifcation === 'center') {
 $classes = cz_classes(
     'cz-block',
     'cz-block--container',
-    'container'
+    'container',
+    $block['className'] ?? null
 );
 ?>
 

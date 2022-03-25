@@ -5,7 +5,8 @@ $right_color = get_field('cz_right_color');
 
 $classes = cz_classes(
 	'cz-block',
-	'cz-block--rule'
+	'cz-block--rule',
+    $block['className'] ?? null
 );
 ?>
 

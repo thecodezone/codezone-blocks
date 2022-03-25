@@ -9,7 +9,8 @@ $images = get_field('cz_images') ? get_field('cz_images') : [];
 
 $classes = cz_classes(
     'cz-block',
-    'cz-block--image-carousel'
+    'cz-block--image-carousel',
+    $block['className'] ?? null
 );
 
 $options = [

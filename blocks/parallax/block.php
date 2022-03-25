@@ -13,7 +13,8 @@ $props = get_field( 'cz_parallax_props' );
 $classes = cz_classes(
     'cz-block',
     'cz-block--parallax',
-    $custom ? false : 'cz-parallax--default'
+    $custom ? false : 'cz-parallax--default',
+    $block['className'] ?? null
 );
 
 if ( $custom && $props ) {

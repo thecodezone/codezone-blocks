@@ -11,7 +11,8 @@ $classes = cz_classes(
     'cz-block--accordion',
     'cz-accordion--' . $orientation,
     'cz-accordion--loading',
-    $hover ? 'cz-accordion--hover' : false
+    $hover ? 'cz-accordion--hover' : false,
+    $block['className'] ?? null
 );
 ?>
 
