@@ -21,7 +21,7 @@ $classes = cz_classes(
         <InnerBlocks  allowedBlocks="<?php echo esc_attr(wp_json_encode( [ 'acf/cz-accordion-panel'] ) ) ?>"/>
     </div>
 <?php else: ?>
-    <div class="<?= $classes ?>" style="
+    <div class="<?= $classes ?>" data-transition-speed="<?php echo esc_attr($speed); ?>" style="
             --cz-accordion-closed-panel-size: <?= esc_attr($size) ?>;
             --cz-accordion-closed-panel-size-mobile: <?= esc_attr($mobile_size) ?>;
             --cz-accordion-transition: max-width <?= esc_attr($speed) ?>ms <?= esc_attr($effect) ?>, max-height <?= esc_attr($speed) ?>ms <?= esc_attr($effect) ?>;
