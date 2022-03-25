@@ -25,6 +25,7 @@ $classes = cz_classes(
          'reset'   => $reset,
      ] ) ?>'
      data-reveal-animation='<?php echo wp_json_encode( [
+         'duration' => $duration,
          'distance' => $distance . 'px',
          'origin'   => $origin,
          'rotate'   => [
