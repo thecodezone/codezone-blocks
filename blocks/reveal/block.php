@@ -33,7 +33,7 @@ $classes = cz_classes(
              'y' => 0,
              'z' => $rotate,
          ],
-         'scale'    => (float)$scale / 10,
+         'scale'    => (float) 1 - ($scale / 10),
          'delay'    => (int)$delay
      ] ) ?>'>
     <InnerBlocks/>
