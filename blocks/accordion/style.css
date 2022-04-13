@@ -40,7 +40,7 @@
   bottom: 0;
   left: 0;
   object-fit: cover;
-  object-position: center center;
+  object-position: var(--cz-accordion-panel-background-position, center center);
   width: 100%;
   height: 100%;
 }
@@ -108,7 +108,6 @@
 .cz-block--accordion-panel {
   position: relative;
   color: var(--cz-accordion-panel-text-color, inherit);
-  background-position: var(--cz-accordion-panel-background-position, center center);
   overflow: hidden;
 }
 
