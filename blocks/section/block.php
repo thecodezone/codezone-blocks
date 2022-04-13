@@ -61,7 +61,7 @@ $inner_classes = cz_classes(
 		<?php if ($has_padding && $padding_bottom_mobile !== null) : ?> --cz-section-padding-bottom-mobile: <?= esc_attr($padding_bottom_mobile) . 'px' ?>; <?php endif; ?>
 		<?php if ($has_padding && $padding_left_mobile !== null) : ?> --cz-section-padding-left-mobile: <?= esc_attr($padding_left_mobile) . 'px' ?>; <?php endif; ?>
 		<?php if ($background_image) : ?> --cz-section-background-image: <?= "url('" . esc_attr($background_image['url']) . "')" ?>; <?php endif; ?>
-        <?php if ($background_image) : ?> --cz-section-background-position: <?= $background_position_left ? esc_attr($background_position_left) : 50 ?>% <?= $background_position_top ? esc_attr($background_position_top) : 50 ?>%; <?php endif; ?>
+        <?php if ($background_image) : ?> --cz-section-background-position: <?= $background_position_left !== null ? esc_attr($background_position_left) : 50 ?>% <?= $background_position_top !== null ? esc_attr($background_position_top) : 50 ?>%; <?php endif; ?>
         <?php if ($background_overlay_opacity) : ?> --cz-section-background-overlay-color: <?= "rgba(0,0,0," . $background_overlay_opacity/10 . ")" ?>; <?php endif; ?>
 		<?php if ($background_image_mobile) : ?> --cz-section-background-image-mobile: <?= "url('" . esc_attr($background_image_mobile['url']) . "')" ?>; <?php endif; ?>
 		<?php if ($border_color) : ?> --cz-section-border-color: <?= esc_attr($border_color) ?>; <?php endif; ?>
