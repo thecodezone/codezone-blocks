@@ -170,7 +170,7 @@
   }
 
   .cz-accordion--vertical .cz-block--accordion-panel:not(.cz-accordion-panel--active) {
-    max-width: var(--cz-accordion-closed-panel-size-mobile);
+    max-height: var(--cz-accordion-closed-panel-size-mobile);
   }
 
   .cz-accordion-panel__inner {
