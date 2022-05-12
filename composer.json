@@ -1,0 +1,13 @@
+{
+    "name": "thecodezone/codezone-blocks",
+    "description": "A block suite by codezone.io",
+    "type": "wordpress-plugin",
+    "license": "NA",
+    "authors": [
+        {
+            "name": "Craig Wann",
+            "email": "craig@codezone.io"
+        }
+    ],
+    "require": {}
+}
