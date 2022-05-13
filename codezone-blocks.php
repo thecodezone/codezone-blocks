@@ -15,8 +15,7 @@
 
 define('CZ_BLOCKS_PLUGIN', __FILE__);
 define('CZ_BLOCKS_URI', plugin_dir_url(CZ_BLOCKS_PLUGIN));
-define('CZ_BLOCKS_VERSION', get_file_data(CZ_BLOCKS_PLUGIN, ['Version' => 'Version'], false));
-
+define('CZ_BLOCKS_VERSION', '1.8.7');
 
 require_once __DIR__ . '/helpers.php';
 
