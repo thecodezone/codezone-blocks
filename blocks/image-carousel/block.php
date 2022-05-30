@@ -3,8 +3,8 @@ $auto_height = get_field('cz_carousel_auto_height') !== null ? get_field('cz_car
 $auto_play = get_field('cz_carousel_auto_play') !== null ? get_field('cz_carousel_auto_play') : false;
 $slides_per_view = get_field('cz_carousel_slides_per_view') ? (int) get_field('cz_carousel_slides_per_view') : 1;
 $slides_per_group = get_field('cz_carousel_slides_per_group') ? (int) get_field('cz_carousel_slides_per_group') : $slides_per_view;
-$space_between = get_field('cz_carousel_space_between') ? (int) get_field('cz_carousel_space_between') :30;
-$loop = get_field('cz_carousel_auto_height') !== null ? get_field('cz_carousel_auto_height') : false;
+$space_between = get_field('cz_carousel_space_between') !== null  ? (int) get_field('cz_carousel_space_between') : 30;
+$loop = get_field('cz_carousel_loop') !== null ? get_field('cz_carousel_loop') : false;
 $images = get_field('cz_images') ? get_field('cz_images') : [];
 
 $classes = cz_classes(
@@ -54,11 +54,11 @@ $options = [
                 <?php foreach($images as $image): ?>
                     <div class="swiper-slide">
                         <img
-        src="<?php echo esc_url($image['url']); ?>"
-        alt="<?php echo esc_attr($image['alt']); ?>"
-        width="<?php echo esc_attr($image['width']) ?>"
-        height="<?php echo esc_attr($image['height']) ?>"
-        class="nolazyload"/>
+                            src="<?php echo esc_url($image['url']); ?>"
+                            alt="<?php echo esc_attr($image['alt']); ?>"
+                            width="<?php echo esc_attr($image['width']) ?>"
+                            height="<?php echo esc_attr($image['height']) ?>"
+                            class="nolazyload"/>
                     </div>
                 <?php endforeach; ?>
             </div>

@@ -44,6 +44,17 @@ acf_add_local_field_group( [
             'name'  => 'cz_background_image',
             'type'  => 'image',
         ],
+
+        [
+            'key'           => 'cz_background_width',
+            'label'         => 'Background Width',
+            'name'          => 'cz_background_width',
+            'type'          => 'range',
+            'default_value' => 0,
+            'step_size'     => 1,
+            'max'           => 100,
+            'append'        => '%',
+        ],
         [
 
             'key'           => 'cz_background_position_left',
@@ -52,6 +63,7 @@ acf_add_local_field_group( [
             'type'          => 'range',
             'default_value' => 50,
             'step_size'     => 10,
+            'min'           => -100,
             'max'           => 100,
             'append'        => '%',
         ],
@@ -63,6 +75,7 @@ acf_add_local_field_group( [
             'type'          => 'range',
             'default_value' => 50,
             'step_size'     => 10,
+            'min'           => -100,
             'max'           => 100,
             'append'        => '%',
         ],

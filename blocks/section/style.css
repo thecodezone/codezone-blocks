@@ -8,7 +8,8 @@
 	padding: var(--cz-section-padding-top, var(--cz-section-padding-y-default)) var(--cz-section-padding-right, var(--cz-section-padding-x-default)) var(--cz-section-padding-bottom, var(--cz-section-padding-y-default)) var(--cz-section-padding-left, var(--cz-section-padding-x-default));
 	background-color: var(--cz-section-background-color, transparent);
 	background-image: var(--cz-section-background-image);
-	background-size: cover;
+	background-size: var(--cz-hero-background-size, cover);
+	background-repeat: no-repeat;
 	color: var(--cz-section-text-color, inherit);
 	background-position: var(--cz-section-background-position, center center);
 	border-top: solid var(--cz-section-border-color, initial) var(--cz-section-border-top, 0px);
