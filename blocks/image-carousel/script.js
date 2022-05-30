@@ -18,10 +18,6 @@
 		carousel = carousel ? carousel : block[0]
 		if (container) {
 			const options = carousel.dataset.swiperOptions ? JSON.parse(carousel.dataset.swiperOptions) : []
-			options['navigation'] = {
-				'nextEl': carousel.querySelector('.swiper-button-next'),
-				'prevEl': carousel.querySelector('.swiper-button-prev')
-			}
 			new Swiper(container, options);
 		}
 	}

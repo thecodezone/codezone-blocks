@@ -28,7 +28,7 @@ $options = [
     'autoHeight' => $auto_height,
     'autoplay' => $auto_play ? ['delay' => 5000] : false,
     'loop' => $loop,
-    'pagination'  => $pagination ? [ 'el' => ".swiper-pagination" ] : false,
+    'pagination'  => $pagination ? [ 'el' => ".swiper-pagination", 'clickable' => true ] : false,
     'navigation' => $navigation ? [ 'nextEl' => ".swiper-button-next", 'prevEl' => ".swiper-button-prev" ] : false,
     'breakpoints' =>  [
         '1076' => [
@@ -69,10 +69,6 @@ $options = [
                 <div class="swiper-pagination"></div>
             <?php endif; ?>
         </div>
-
-        <?php if($navigation): ?>
-            <div class="swiper-pagination"></div>
-        <?php endif; ?>
 
         <?php if($navigation): ?>
             <div class="swiper-button-prev"></div>
