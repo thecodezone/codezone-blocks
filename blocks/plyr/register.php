@@ -4,7 +4,9 @@ acf_register_block_type([
 	'title'             => 'Plyr',
 	'description'       => 'A video block embed that supports YouTube and Vimeo using plyr.',
 	'render_callback'   => cz_render_acf_block('cz-plyr', __dir__ . '/block.php'),
-    'enqueue_assets' => function(){
+    'enqueue_assets' => function() {
+        wp_enqueue_style( 'plyr',  'https://cdn.plyr.io/3.7.2/plyr.css', [], CZ_BLOCKS_VERSION);
+        wp_enqueue_script( 'plyr', 'https://cdn.plyr.io/3.7.2/plyr.js', [], CZ_BLOCKS_VERSION, true);
         wp_enqueue_style( 'cz-plyr', CZ_BLOCKS_URI . 'blocks/plyr/style.css', [], CZ_BLOCKS_VERSION);
         wp_enqueue_script( 'cz-plyr',  CZ_BLOCKS_URI . 'blocks/plyr/script.js', [], CZ_BLOCKS_VERSION, true );
     },
