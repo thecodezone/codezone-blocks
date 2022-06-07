@@ -7,7 +7,7 @@
  * Author URI:      https://codezone.io
  * Text Domain:     codezone-blocks
  * Domain Path:     /languages
- * Version:         1.8.14
+ * Version:         1.8.15
  * GitHub Plugin URI: thecodezone/codezone-blocks
  *
  * @package         Codezone_Blocks

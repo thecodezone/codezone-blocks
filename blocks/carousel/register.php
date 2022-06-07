@@ -10,7 +10,7 @@ acf_register_block_type([
         wp_enqueue_script( 'swiper', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.4.1/swiper-bundle.min.js', true);
         wp_enqueue_style( 'swiper', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.4.1/swiper-bundle.css');
         wp_enqueue_style( 'cz-carousel', CZ_BLOCKS_URI . 'blocks/carousel/style.css', [], CZ_BLOCKS_VERSION);
-        wp_enqueue_script( 'cz-carousel', CZ_BLOCKS_URI . 'blocks/carousel/script.js', ['cz-swiper-js'], CZ_BLOCKS_VERSION, true );
+        wp_enqueue_script( 'cz-carousel', CZ_BLOCKS_URI . 'blocks/carousel/script.js', ['swiper'], CZ_BLOCKS_VERSION, true );
     },
     'category' => 'cz',
     'keywords' => ['carousel', 'swiper'],
