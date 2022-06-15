@@ -7,7 +7,7 @@
  * Author URI:      https://codezone.io
  * Text Domain:     codezone-blocks
  * Domain Path:     /languages
- * Version:         1.8.15
+ * Version:         1.8.16
  * GitHub Plugin URI: thecodezone/codezone-blocks
  *
  * @package         Codezone_Blocks
@@ -15,7 +15,7 @@
 
 define('CZ_BLOCKS_PLUGIN', __FILE__);
 define('CZ_BLOCKS_URI', plugin_dir_url(CZ_BLOCKS_PLUGIN));
-define('CZ_BLOCKS_VERSION', '1.8.11');
+define('CZ_BLOCKS_VERSION', '1.8.16');
 
 require_once __DIR__ . '/helpers.php';
 
