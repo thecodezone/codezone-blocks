@@ -92,7 +92,7 @@ function cz_init_block_types() {
 	}
 }
 
-add_filter( 'block_categories', 'cz_add_block_category', 10, 2);
+add_filter( 'block_categories_all', 'cz_add_block_category', 10, 2);
 function cz_add_block_category( $categories, $post ) {
     return array_merge(
         $categories,
