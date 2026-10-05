@@ -1,5 +1,12 @@
 <?php
 
+// enqueue_block_assets (unlike ACF's per-block 'enqueue_assets' callback)
+// is recognized natively by the block editor's iframe, so this block's
+// styles reliably show up while editing, not just on the front end.
+add_action( 'enqueue_block_assets', function () {
+	wp_enqueue_style( 'cz-accordion', CZ_BLOCKS_URI . 'blocks/accordion/style.css', [], CZ_BLOCKS_VERSION );
+} );
+
 acf_register_block_type([
     'name' => 'cz-accordion',
     'title' => 'Accordion',
@@ -7,7 +14,6 @@ acf_register_block_type([
     'render_callback' => cz_render_acf_block('cz-accordion', __dir__ . '/block.php'),
     'icon' => '<svg xmlns="http://www.w3.org/2000/svg" style="color: #EE4538" viewBox="0 0 640 512"><!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><defs><style>.fa-secondary{opacity:.4}</style></defs><path class="fa-primary" d="M576 32C611.3 32 640 60.65 640 96V416C640 451.3 611.3 480 576 480H64C28.65 480 0 451.3 0 416V96C0 60.65 28.65 32 64 32H576zM576 96H64V416H576V96z"/><path class="fa-secondary" d="M192 96H256V416H192V96zM384 96H448V416H384V96z"/></svg>',
     'enqueue_assets' => function(){
-        wp_enqueue_style( 'cz-accordion', CZ_BLOCKS_URI . 'blocks/accordion/style.css', [], CZ_BLOCKS_VERSION);
         wp_enqueue_script( 'cz-accordion', CZ_BLOCKS_URI . 'blocks/accordion/script.js', [], CZ_BLOCKS_VERSION, true );
     },
     'category' => 'cz',

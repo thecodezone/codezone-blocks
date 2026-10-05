@@ -1,4 +1,12 @@
 <?php
+
+// enqueue_block_assets (unlike ACF's per-block 'enqueue_assets' callback)
+// is recognized natively by the block editor's iframe, so this block's
+// styles reliably show up while editing, not just on the front end.
+add_action( 'enqueue_block_assets', function () {
+	wp_enqueue_style( 'cz-reveal', CZ_BLOCKS_URI . 'blocks/reveal/style.css', [], CZ_BLOCKS_VERSION );
+} );
+
 acf_register_block_type( [
     'name'            => 'cz-reveal',
     'title'           => 'Reveal',
@@ -6,7 +14,6 @@ acf_register_block_type( [
     'render_callback' => cz_render_acf_block( 'cz-reveal', __dir__ . '/block.php' ),
     'enqueue_assets'  => function () {
         wp_enqueue_script( 'cz-scroll-reveal', 'https://unpkg.com/scrollreveal', [], CZ_BLOCKS_VERSION, true );
-        wp_enqueue_style( 'cz-reveal', CZ_BLOCKS_URI . 'blocks/reveal/style.css', [], CZ_BLOCKS_VERSION );
         wp_enqueue_script( 'cz-reveal', CZ_BLOCKS_URI . 'blocks/reveal/script.js', [
             'cz-scroll-reveal'
         ], CZ_BLOCKS_VERSION, true );
