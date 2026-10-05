@@ -1,4 +1,12 @@
 <?php
+
+// enqueue_block_assets (unlike ACF's per-block 'enqueue_assets' callback)
+// is recognized natively by the block editor's iframe, so this block's
+// styles reliably show up while editing, not just on the front end.
+add_action( 'enqueue_block_assets', function () {
+	wp_enqueue_style( 'cz-parallax', CZ_BLOCKS_URI . 'blocks/parallax/style.css', [], CZ_BLOCKS_VERSION );
+} );
+
 acf_register_block_type( [
     'name'            => 'cz-parallax',
     'title'           => 'Parallax',
@@ -6,7 +14,6 @@ acf_register_block_type( [
     'render_callback' => cz_render_acf_block( 'cz-parallax', __dir__ . '/block.php' ),
     'enqueue_assets'  => function () {
         wp_enqueue_script( 'cz-basic-scroll', 'https://unpkg.com/basicscroll@3.0.4/dist/basicScroll.min.js', [], CZ_BLOCKS_VERSION, true );
-        wp_enqueue_style( 'cz-parallax', CZ_BLOCKS_URI . 'blocks/parallax/style.css', [], CZ_BLOCKS_VERSION );
         wp_enqueue_script( 'cz-parallax', CZ_BLOCKS_URI . 'blocks/parallax/script.js', [
             'cz-basic-scroll'
         ], CZ_BLOCKS_VERSION, true );

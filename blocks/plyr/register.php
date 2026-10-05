@@ -1,13 +1,20 @@
 <?php
+
+// enqueue_block_assets (unlike ACF's per-block 'enqueue_assets' callback)
+// is recognized natively by the block editor's iframe, so this block's
+// styles reliably show up while editing, not just on the front end.
+add_action( 'enqueue_block_assets', function () {
+	wp_enqueue_style( 'plyr', 'https://cdn.plyr.io/3.7.2/plyr.css', [], CZ_BLOCKS_VERSION );
+	wp_enqueue_style( 'cz-plyr', CZ_BLOCKS_URI . 'blocks/plyr/style.css', [], CZ_BLOCKS_VERSION );
+} );
+
 acf_register_block_type([
 	'name'              => 'cz-plyr',
 	'title'             => 'Plyr',
 	'description'       => 'A video block embed that supports YouTube and Vimeo using plyr.',
 	'render_callback'   => cz_render_acf_block('cz-plyr', __dir__ . '/block.php'),
     'enqueue_assets' => function() {
-        wp_enqueue_style( 'plyr',  'https://cdn.plyr.io/3.7.2/plyr.css', [], CZ_BLOCKS_VERSION);
         wp_enqueue_script( 'plyr', 'https://cdn.plyr.io/3.7.2/plyr.js', [], CZ_BLOCKS_VERSION, true);
-        wp_enqueue_style( 'cz-plyr', CZ_BLOCKS_URI . 'blocks/plyr/style.css', [], CZ_BLOCKS_VERSION);
         wp_enqueue_script( 'cz-plyr',  CZ_BLOCKS_URI . 'blocks/plyr/script.js', ['plyr'], CZ_BLOCKS_VERSION, true );
     },
 	'category'          => 'cz',

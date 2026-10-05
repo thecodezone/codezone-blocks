@@ -1,4 +1,12 @@
 <?php
+
+// enqueue_block_assets (unlike ACF's per-block 'enqueue_assets' callback)
+// is recognized natively by the block editor's iframe, so this block's
+// styles reliably show up while editing, not just on the front end.
+add_action( 'enqueue_block_assets', function () {
+	wp_enqueue_style( 'cz-image-carousel', CZ_BLOCKS_URI . 'blocks/image-carousel/style.css', [], CZ_BLOCKS_VERSION );
+} );
+
 acf_register_block_type( [
     'name'            => 'cz-image-carousel',
     'title'           => 'Image Carousel',
@@ -7,7 +15,6 @@ acf_register_block_type( [
     'enqueue_assets'  => function () {
         wp_enqueue_script( 'swiper', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.4.1/swiper-bundle.min.js', true );
         wp_enqueue_style( 'swiper', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.4.1/swiper-bundle.css' );
-        wp_enqueue_style( 'cz-image-carousel', CZ_BLOCKS_URI . 'blocks/image-carousel/style.css', [], CZ_BLOCKS_VERSION );
         wp_enqueue_script( 'cz-image-carousel', CZ_BLOCKS_URI . 'blocks/image-carousel/script.js', [ 'swiper' ], CZ_BLOCKS_VERSION, true );
     },
     'category'        => 'cz',
