@@ -3,7 +3,15 @@
 // enqueue_block_assets (unlike ACF's per-block 'enqueue_assets' callback)
 // is recognized natively by the block editor's iframe, so this block's
 // styles reliably show up while editing, not just on the front end.
+//
+// Swiper's CSS is self-hosted (third-party/swiper/swiper-bundle.css) rather than
+// loaded from the CDN: the block editor's iframe style sync reads each
+// stylesheet's cssRules to copy it into the iframe, which throws for a
+// cross-origin stylesheet loaded without a CORS-fetch -- so the CDN version
+// silently never reached the iframe, leaving carousel slides unclipped and
+// spilling outside the visible canvas.
 add_action( 'enqueue_block_assets', function () {
+	wp_enqueue_style( 'swiper', CZ_BLOCKS_URI . 'third-party/swiper/swiper-bundle.css', [], CZ_BLOCKS_VERSION );
 	wp_enqueue_style( 'cz-carousel', CZ_BLOCKS_URI . 'blocks/carousel/style.css', [], CZ_BLOCKS_VERSION );
 } );
 
@@ -15,7 +23,6 @@ acf_register_block_type([
     'icon' => '<svg aria-hidden="true" style="color: #EE4538" focusable="false" data-prefix="fad" data-icon="presentation" class="svg-inline--fa fa-presentation fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><g class="fa-group"><path class="fa-secondary" fill="currentColor" d="M480 64h64v256a32 32 0 0 1-32 32H64a32 32 0 0 1-32-32V64h64v224h384z" opacity="0.4"></path><path class="fa-primary" fill="currentColor" d="M560 0H16A16 16 0 0 0 0 16v32a16 16 0 0 0 16 16h544a16 16 0 0 0 16-16V16a16 16 0 0 0-16-16zM320 386.75V352h-64v34.75l-75.31 75.31a16 16 0 0 0 0 22.63l22.62 22.62a16 16 0 0 0 22.63 0L288 445.25l62.06 62.06a16 16 0 0 0 22.63 0l22.62-22.62a16 16 0 0 0 0-22.63z"></path></g></svg>',
     'enqueue_assets' => function(){
         wp_enqueue_script( 'swiper', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.4.1/swiper-bundle.min.js', true);
-        wp_enqueue_style( 'swiper', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.4.1/swiper-bundle.css');
         wp_enqueue_script( 'cz-carousel', CZ_BLOCKS_URI . 'blocks/carousel/script.js', ['swiper'], CZ_BLOCKS_VERSION, true );
     },
     'category' => 'cz',

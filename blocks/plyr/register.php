@@ -3,8 +3,13 @@
 // enqueue_block_assets (unlike ACF's per-block 'enqueue_assets' callback)
 // is recognized natively by the block editor's iframe, so this block's
 // styles reliably show up while editing, not just on the front end.
+//
+// Plyr's CSS is self-hosted (third-party/plyr/plyr.css) rather than loaded from
+// the CDN: the iframe style sync reads each stylesheet's cssRules to copy
+// it into the iframe, which throws for a cross-origin stylesheet loaded
+// without a CORS-fetch, so the CDN version never reached the iframe.
 add_action( 'enqueue_block_assets', function () {
-	wp_enqueue_style( 'plyr', 'https://cdn.plyr.io/3.7.2/plyr.css', [], CZ_BLOCKS_VERSION );
+	wp_enqueue_style( 'plyr', CZ_BLOCKS_URI . 'third-party/plyr/plyr.css', [], CZ_BLOCKS_VERSION );
 	wp_enqueue_style( 'cz-plyr', CZ_BLOCKS_URI . 'blocks/plyr/style.css', [], CZ_BLOCKS_VERSION );
 } );
 

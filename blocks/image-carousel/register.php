@@ -3,7 +3,12 @@
 // enqueue_block_assets (unlike ACF's per-block 'enqueue_assets' callback)
 // is recognized natively by the block editor's iframe, so this block's
 // styles reliably show up while editing, not just on the front end.
+// Swiper's CSS is self-hosted (see blocks/carousel/register.php) so the
+// block editor's iframe style sync can read and copy it; a cross-origin
+// CDN stylesheet loaded without a CORS-fetch throws on cssRules access
+// and gets silently skipped, so it never reached the iframe.
 add_action( 'enqueue_block_assets', function () {
+	wp_enqueue_style( 'swiper', CZ_BLOCKS_URI . 'third-party/swiper/swiper-bundle.css', [], CZ_BLOCKS_VERSION );
 	wp_enqueue_style( 'cz-image-carousel', CZ_BLOCKS_URI . 'blocks/image-carousel/style.css', [], CZ_BLOCKS_VERSION );
 } );
 
@@ -14,7 +19,6 @@ acf_register_block_type( [
     'render_callback' => cz_render_acf_block( 'cz-image-carousel', __dir__ . '/block.php' ),
     'enqueue_assets'  => function () {
         wp_enqueue_script( 'swiper', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.4.1/swiper-bundle.min.js', true );
-        wp_enqueue_style( 'swiper', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.4.1/swiper-bundle.css' );
         wp_enqueue_script( 'cz-image-carousel', CZ_BLOCKS_URI . 'blocks/image-carousel/script.js', [ 'swiper' ], CZ_BLOCKS_VERSION, true );
     },
     'category'        => 'cz',
