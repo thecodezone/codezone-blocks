@@ -1,4 +1,11 @@
 .cz-block--container.container {
+    /* Host themes commonly have their own generic .container utility class
+       (e.g. sized as a percentage of the viewport width). Since this block
+       reuses that same bare class name, and it's often nested inside other
+       containers, such a theme rule can make it wider than its actual parent
+       and overflow instead of centering. Pin width to the parent so
+       max-width/margin below can size and center it correctly. */
+    width: 100%;
     margin: var(--cz-container-margin, 0 auto);
     max-width: var(--cz-container-width, unset);
 }
