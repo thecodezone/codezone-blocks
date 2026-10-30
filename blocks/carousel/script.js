@@ -16,6 +16,19 @@
     let carousel = block[0].querySelector(".cz-block--carousel")
     carousel = carousel ? carousel : block[0]
     if (container) {
+      // ACF renders <InnerBlocks /> server-side by wrapping the slides in a
+      // .acf-innerblocks-container div. Swiper reads its slides from the
+      // .swiper-wrapper's direct DOM children, so that wrapper div makes it
+      // see zero slides. Unwrap it before Swiper ever looks at the DOM.
+      let wrapper = container.querySelector(".swiper-wrapper")
+      let innerWrap = wrapper && wrapper.querySelector(":scope > .acf-innerblocks-container")
+      if (innerWrap) {
+        while (innerWrap.firstChild) {
+          wrapper.appendChild(innerWrap.firstChild)
+        }
+        innerWrap.remove()
+      }
+
       const options = block[0].dataset.swiperOptions
         ? JSON.parse(carousel.dataset.swiperOptions)
         : []
