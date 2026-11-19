@@ -35,7 +35,7 @@
 }
 
 
-.block-editor .cz-block--hero {
+:is(.block-editor, .block-editor-iframe__body) .cz-block--hero {
 	width: auto;
 	left: unset;
 	right: unset;
@@ -53,7 +53,7 @@
 	background-color: var(--cz-hero-background-overlay-color, transparent);
 }
 
-.block-editor .cz-block--hero__wrapper {
+:is(.block-editor, .block-editor-iframe__body) .cz-block--hero__wrapper {
 	border: dashed 1px #22A5AD;
 }
 

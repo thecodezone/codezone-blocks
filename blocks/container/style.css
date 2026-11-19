@@ -10,7 +10,7 @@
     max-width: var(--cz-container-width, unset);
 }
 
-.block-editor .cz-block--container.container {
+:is(.block-editor, .block-editor-iframe__body) .cz-block--container.container {
     border: dashed 1px #22A5AD;
     padding: 25px;
 }

@@ -25,8 +25,8 @@
 	background-color: var(--cz-card-background-overlay-color, transparent);
 }
 
-.block-editor .cz-block--card__wrapper,
-.block-editor .cz-block--card .cz-block--card__inner.container {
+:is(.block-editor, .block-editor-iframe__body) .cz-block--card__wrapper,
+:is(.block-editor, .block-editor-iframe__body) .cz-block--card .cz-block--card__inner.container {
 	border: dashed 1px #22A5AD;
 }
 
