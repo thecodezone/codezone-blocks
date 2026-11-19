@@ -3,7 +3,7 @@
     height: fit-content;
 }
 
-.block-editor .cz-block--parallax {
+:is(.block-editor, .block-editor-iframe__body) .cz-block--parallax {
 	padding: 25px;
 	border: dashed 1px #22A5AD;
     width: unset;

@@ -1,4 +1,4 @@
-.block-editor .cz-block--reveal {
+:is(.block-editor, .block-editor-iframe__body) .cz-block--reveal {
 	padding: 25px;
 	border: dashed 1px #22A5AD;
 }
@@ -7,6 +7,6 @@
 	visibility: hidden;
 }
 
-.block-editor .cz-block--hidden {
+:is(.block-editor, .block-editor-iframe__body) .cz-block--hidden {
 	visibility: visible;
 }
